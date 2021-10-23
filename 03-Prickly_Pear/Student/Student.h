@@ -1,5 +1,5 @@
-#ifndef log_h
-#define log_h
+#ifndef Student_h
+#define Student_h
 
 class Student{
 	
@@ -11,9 +11,9 @@ float srednia_ocen;
 
 public:
 
-	Student(){
+	Student(std::string im, std::string na, std::string in, int se, float sr){
 		
-		imie = "Igor"; nazwisko = "Pieper"; index="s25321"; semestr=1;srednia_ocen=4.9;
+		imie = im; nazwisko = na; index = in; semestr = se;srednia_ocen = sr;
 
 	};
 
