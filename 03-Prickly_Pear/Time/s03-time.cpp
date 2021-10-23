@@ -6,7 +6,8 @@ int main (){
 int wybor;
 
 system("clear");
-czas s1;
+
+czas s1(22, 58, 58);
 s1.to_string();
 std::cout<<"\n";
 
@@ -34,3 +35,4 @@ while (true){
 return 0;
 
 }
+
