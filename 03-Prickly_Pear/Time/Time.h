@@ -8,9 +8,9 @@ class czas{
 
 public:
 
-	czas(){
+	czas(int h, int m, int s){
 
-		hour = 22; min = 58; sec = 58;
+		hour = h; min = m; sec = s;
 
 	};
 
@@ -55,4 +55,3 @@ public:
 };
 
 #endif
-
