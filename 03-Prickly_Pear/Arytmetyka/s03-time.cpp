@@ -138,7 +138,7 @@ while (true){
 	std::cout<<"Aby dodać minutę wpisz 2\n";
 	std::cout<<"Aby dodać sekundę wpisz 3\n";
 	std::cout<<"Aby sprawdzić porę dnia wpisz 4\n";
-	std::cout<<"Aby wyłączyć tryb arytmetyczny wpisz 5\n";
+	std::cout<<"Aby włączyć tryb arytmetyczny wpisz 5\n";
 	std::cout<<"Aby wyłączyć program wpisz 6\n\n";
 	std::cout<<"Twój wybór: ";
 	std::cin>>wybor;
