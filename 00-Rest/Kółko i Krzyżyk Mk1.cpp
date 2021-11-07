@@ -96,6 +96,8 @@ while(true){
 		std::cout<<"Gracz \33[1;32mZielony\33[0m wygrał!!!\n\n"; break;
 	} else if (wygrana==2){
 		std::cout<<"Gracz \33[1;31mCzerwony\33[0m wygrał!!!\n\n"; break;
+	} else if (wygrana==3){
+		std::cout<<"Remis!!!\n\n"; break;
 	}
 
 	if (gracz==1){
@@ -165,6 +167,24 @@ while(true){
 		wygrana=1;
 	} else if (A3==2 && B2==2 && C1==2){
 		wygrana=2;
+	} else if (B1==1 && B2==1 && B3==1){
+		wygrana=1;
+	} else if (B1==2 && B2==2 && C3==2){
+		wygrana=2;
+	} else if (C1==1 && C2==1 && C3==1){
+		wygrana=1;
+	} else if (C1==2 && C2==2 && C3==2){
+		wygrana=2;
+	} else if (A2==1 && B2==1 && C2==1){
+		wygrana=1;
+	} else if (A2==2 && B2==2 && C2==2){
+		wygrana=2;
+	} else if (A3==1 && B3==1 && C3==1){
+		wygrana=1;
+	} else if (A3==2 && B3==2 && C3==2){
+		wygrana=2;
+	} else if (A1!=0 && A2!=0 && A3!=0 && B1!=0 && B2!=0 && B3!=0 && C1!=0 && C2!=0 && C3!=0){
+		wygrana=3;
 	}
 
 
