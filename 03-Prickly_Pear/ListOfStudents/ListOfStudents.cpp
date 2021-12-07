@@ -1,18 +1,59 @@
 #include <iostream>
-#include <string>
+#include <list>
 #include "List.h"
 
-int main(){
+std::list <Student> lista;
+
+auto dodaj() -> void{
+
+	std::string numer;
+	std::string imie;
+	std::string nazwisko;
+
+	std::cout<<"Proszę podać numer studenta: ";
+	std::cin>>numer;
+	std::cout<<"Proszę podać imię studenta: ";
+	std::cin>>imie;
+	std::cout<<"Proszę podać nazwisko studenta: ";
+	std::cin>>nazwisko;
+
+	auto studencik = Student{numer, imie, nazwisko};
+	lista.push_back(studencik);
+
+	system("clear");
+}
+
+auto poka() -> void{
+	
+	for(std::list<Student>::iterator i=lista.begin(); i!=lista.end(); ++i){
+		auto studencik = *i;
+		studencik.to_string();
+	}
+	std::cout<<"\n\n";
+
+}
+
+auto usun() -> void{
+
+	std::string num;
+	
+	poka();
+
+	std::cout<<"Kogo chce Pani/Pan usunąć: ";
+	std::cin>>num;
+
+	auto usunn = Student{num};
+	lista.remove(usunn);
+
+	system("clear");
+
+}
+
+auto main() -> int{
 
 system("clear");
 
-Student s0("Igor ","Pieper");
-
-int wybor, pech;
-int student=1;
-std::string imie1, nazwisko1;
-std::string imie0[100];
-std::string nazwisko0[100];
+int wybor;
 
 while(true){
 
@@ -25,36 +66,19 @@ while(true){
 
 	if(wybor==1){
 		system("clear");
-
-		std::cout<<"Podaj imię studenta: ";
-		std::cin>>imie1;
-		std::cout<<"Podaj nazwisko studenta: ";
-		std::cin>>nazwisko1;
-
-		Student s0(imie1,nazwisko1);
-		imie0[student] = s0.imie;
-		nazwisko0[student] = s0.nazwisko;
-		student++;
-
+		
+		dodaj();
+		
 	} else if (wybor==2){
-
 		system("clear");
-
-		for(int i=1; i<student;i++){
-			
-			if(imie0[i]!="null"){
-				std::cout<<i<<". "<<imie0[i]<<" "<<nazwisko0[i]<<"\n";
-			}
-		}
-		std::cout<<"\n";
+		
+		poka();
 
 	} else if (wybor==3){
-		
 		system("clear");		
-		
-		std::cout<<"Wybierz numer osoby, którą chcesz usunąć: ";
-		std::cin>>pech;
-		imie0[pech] = "null";
+
+		usun();
+
 	} else if (wybor==4){
 		break;
 	}
