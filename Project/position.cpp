@@ -1,9 +1,6 @@
 #include <ncurses.h>
 
-int position_width = 4;
-int position_height = 5;
-
-void position(){	
+void position(int position_height, int position_width){
 	
 	start_color();
 	
@@ -13,30 +10,29 @@ void position(){
 		mvprintw(position_height, position_width, "  ");
 		move(0,0);
 	attroff(COLOR_PAIR(7));
-	
 }
 
 int before = 2;
 
-void move(){	
+void travel(int &position_height, int &position_width, int &victory){	
 	
 	mvprintw(15, 2, "                             ");
 	mvprintw(17, 2, "                             ");
 	mvprintw(16, 2, "                             ");
 	
 	if (position_height>2 && before!=0){
-		mvprintw(15, 2, "> I want to go up (W)");
+		mvprintw(11, 2, "> I want to go up (W)");
 	}
 	if (position_width<=26){	
-		mvprintw(16, 2, "> I want to go straight (D)");
+		mvprintw(12, 2, "> I want to go straight (D)");
 	}
 	if (position_height<8 && before!=1){
-		mvprintw(17, 2, "> I want to go down (S)");
+		mvprintw(13, 2, "> I want to go down (S)");
 	}
 	
 	while(true){
 		
-		move(18, 2);
+		move(14, 2);
 		int wybor = getch();
 		
 		if((wybor==259 || wybor=='w' || wybor=='W') && (before==1 || before==2) && position_height>2){
@@ -60,6 +56,11 @@ void move(){
 			position_height++;
 			
 			before=0;
+			
+			break;
+		} else if (position_width>26 && (position_height>=8 || position_height<=2)){
+			
+			victory=2;
 			
 			break;
 		}

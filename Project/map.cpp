@@ -57,7 +57,7 @@ void show_map(){
 		mvprintw(2, 26, "  ^ ");
 		mvprintw(3, 24, "    ^ ");
 		mvprintw(4, 24, "   ^  ");
-		mvprintw(5, 24, "     M");
+		attron(A_BOLD); mvprintw(5, 24, "     M"); attroff(A_BOLD);
 		mvprintw(6, 24, "  ^ ^ ");
 		mvprintw(7, 24, "   ^  ");
 		mvprintw(8, 26, "  ^ ");
