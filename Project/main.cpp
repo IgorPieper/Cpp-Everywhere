@@ -1,4 +1,5 @@
 #include <ncurses.h>
+#include <clocale>
 #include "map.cpp"
 #include "position.cpp"
 #include "ending.cpp"
@@ -10,8 +11,11 @@ int pw = 4;
 int vic = 0;
 int hp = 100;
 int eq = 0;
+int cloak = 0;
 
 auto main() -> int{
+
+std::setlocale(LC_ALL, "");
 
 initscr();
 keypad(stdscr, TRUE);
@@ -20,16 +24,16 @@ start(ph, pw, hp);
 
 while(true){
 	
-	pages(ph, pw, vic, hp, eq);
-	
-	show_map();
-	position(ph, pw);
-	travel(ph, pw, vic);
+	pages(ph, pw, vic, hp, eq, cloak);
 	
 	if (vic>0){
 		victory(vic);
 		break;
 	}
+	
+	show_map();
+	position(ph, pw);
+	travel(ph, pw, vic);
 	
 }
 

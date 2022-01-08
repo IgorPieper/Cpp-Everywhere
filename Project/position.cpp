@@ -21,13 +21,13 @@ void travel(int &position_height, int &position_width, int &victory){
 	mvprintw(16, 2, "                             ");
 	
 	if (position_height>2 && before!=0){
-		mvprintw(11, 2, "> I want to go up (W)");
+		mvprintw(11, 2, "> Chcę udać się w górę (W)");
 	}
 	if (position_width<=26){	
-		mvprintw(12, 2, "> I want to go straight (D)");
+		mvprintw(12, 2, "> Chcę udać się w prawo (D)");
 	}
 	if (position_height<8 && before!=1){
-		mvprintw(13, 2, "> I want to go down (S)");
+		mvprintw(13, 2, "> Chcę udać się w dół (S)");
 	}
 	
 	while(true){
@@ -58,9 +58,14 @@ void travel(int &position_height, int &position_width, int &victory){
 			before=0;
 			
 			break;
-		} else if (position_width>26 && (position_height>=8 || position_height<=2)){
+		} else if (position_width>26 && position_height>=8){
 			
 			victory=2;
+			
+			break;
+		} else if (position_width>26 && position_height<=2){
+			
+			victory=3;
 			
 			break;
 		}

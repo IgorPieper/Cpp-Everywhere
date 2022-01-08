@@ -1,6 +1,5 @@
 #include <ncurses.h>
 
-
 void start(int &ph, int &pw, int &hp){
 
 	start_color();
@@ -81,7 +80,7 @@ void start(int &ph, int &pw, int &hp){
 	attroff(COLOR_PAIR(100));
 	
 	attron(A_BOLD);
-		mvprintw(18,25, "Wcisnij dowolny klawisz aby rozpoczac gre");
+		mvprintw(18,25, "Wciśnij dowolny klawisz aby rozpocząć grę");
 	attroff(A_BOLD);
 		move(18,24);
 	
