@@ -53,6 +53,12 @@ clear();
 		mvprintw(15,6,"Zakoczenie nr.8");
 	}
 	
+//Brak Kaptura
+	
+	else if(victory==9){
+		mvprintw(15,6,"Zakoczenie nr.9");
+	}
+	
 	attroff(A_BOLD);
 	
 	attron(COLOR_PAIR(100));

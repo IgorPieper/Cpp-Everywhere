@@ -2,13 +2,16 @@
 #include "life.cpp"
 #include "eqipment.cpp"
 
+int skip = 0;
+int skipp = 0;
+int slime = 0;
+int krasno = 0;
+
 void pages(int ph, int pw, int &vic, int &hp, int &eq, int &cloak, int &ff){
 
 	clear();
 	life(hp,vic);
 	eqip(eq);
-	
-	int skip = 0;
 	
 	start_color();
 	init_pair(30, COLOR_BLACK, COLOR_WHITE);
@@ -29,9 +32,11 @@ void pages(int ph, int pw, int &vic, int &hp, int &eq, int &cloak, int &ff){
 		mvprintw(4, 3, "Czy tego chcę, czy nie. Sam władca demonów zlecił mi pojmanie księżniczki z przeciwległego królestwa."); move(4,2); getch();
 		mvprintw(4, 3, "Zdecydowanie nie będzie to łatwe zadanie, lecz raz się żyje. Jak tego nie zrobię to i tak Mroczny Generał skróci mnie o głowę."); move(4,2);
 		mvprintw(6, 6, "Gdyby to tylko była gra i mógłbym cofnąć czas..."); move(4,2); getch();
-                                                                                                                                                                                
+        mvprintw(1, 50, "                                                                             ");
+		
 		attron(COLOR_PAIR(30));mvprintw(1, 50, "Poradnik");attroff(COLOR_PAIR(30));
-		mvprintw(4, 3, "Przyszedł czas na objaśnienie zasad gry                                                                                                                                      "); move(4,2); getch();
+		mvprintw(4, 3, "Przyszedł czas na objaśnienie zasad gry                                                                                                                                      ");
+		mvprintw(6, 6, "                                                                                                                                    "); move(4,2); getch();
 		mvprintw(4, 3, "Twoim głównym celem jest pojmanie księżniczki znajdującej się w przeciwległym królestwie ludzi w polu oznaczonym literką M."); move(4,2); getch();
 		mvprintw(4, 3, "Po drodze czeka cię wiele przygód, bla bla bla wszyscy to znamy.                                                             "); move(4,2); getch();
 		mvprintw(4, 3, "Twoja postać może poruszać się w 3 kierunkach, aczkolwiek nie może się cofać więc uważaj, gdyż może być to dosyć zgubne."); move(4,2); getch();
@@ -157,10 +162,30 @@ void pages(int ph, int pw, int &vic, int &hp, int &eq, int &cloak, int &ff){
 	
 	else if(ph==6 && pw==4) {
 		attron(COLOR_PAIR(30));mvprintw(1, 50, "Koszary");attroff(COLOR_PAIR(30));
-		mvprintw(4, 3, "Kto raz przechodził nieopodal, nie zapomni już nigdy tego specyficznego miejsca. Zapach potu, wymieszany z bólem i cierpieniem. Potworne krzyki, wieczny ruch. Lecz dziś jest inaczej");
-		mvprintw(6, 6, "W okolicy jest spokojnie. Z koszarów nie dochodzą żadne dźwięki. Ten błogi spokój przykrywać może tylko jedną klątwę."); move(4,2); getch();
+		mvprintw(4, 3, "Kto raz przechodził nieopodal, nie zapomni już nigdy tego specyficznego miejsca. Zapach potu, wymieszany z bólem i cierpieniem. Potworne krzyki, wieczny ruch."); move(4,2); getch();
+		mvprintw(4, 3, "Lecz dziś jest inaczej. W okolicy jest spokojnie. Z koszarów nie dochodzą żadne dźwięki. Ten błogi spokój przykrywać może tylko jedną klątwę.                     "); move(4,2); getch();
 		
-		mvprintw(4, 3, "Prowadzenie wojen na północy i zachodzie w jednym momencie ");
+		mvprintw(4, 3, "Wszyscy rekruci musieli wyruszyć na północ, po śmierć i chwałę w bezimiennym grobie.                                                           "); move(4,2);
+	}
+
+//7-4
+	
+	else if(ph==7 && pw==4) {
+		attron(COLOR_PAIR(30));mvprintw(1, 50, "Kuźnia");attroff(COLOR_PAIR(30));
+		mvprintw(4, 3, "Przechodząc się po części miejskiej królestwa demonów, postanawiasz zajść do kuźni po lepszy rynsztunek"); move(4,2); getch();
+		mvprintw(4, 3, "Kowal na twoje nieszczęście wydawał się mocno przybity. Gdy podeszłeś wystarczająco blisko, zaczął rzucać w ciebie ostrymi przedmiotami.       "); move(4,2); getch();
+		mvprintw(4, 3, "Nie pamiętasz kiedy ostatni raz biegłeś tak szybko. Lokalna demoniczna ludność nie pała chyba do ciebie zbytnią sympatią.                   "); move(4,2);
+	}
+	
+//8-4	
+	
+	else if(ph==8 && pw==4) {
+		attron(COLOR_PAIR(30));mvprintw(1, 50, "Plac Ofiarny");attroff(COLOR_PAIR(30));
+		mvprintw(4, 3, "Chowając się przed nieprzychylnymi opiniami mieszkańców zaszedłeś na plac wykorzystywany przy świeckich uroczystościach."); move(4,2); getch();
+		mvprintw(4, 3, "O tej porze roku nikogo nie powinno tutaj być, lecz ku twemu zdziwieniu przebiegła obok ciebie gromada demoniontek bawiąca się w wojnę."); move(4,2); getch();
+		mvprintw(4, 3, "Jedno z nich cię rozpoznało i podarowało ci swój drewniany miecz. Jego słowa o spraniu tyłków ludziom cały czas rozbrzmiewa ci w głowie.  "); move(4,2);
+		eq=2;
+		eqip(eq);
 	}
 	
 //5-6
@@ -195,6 +220,127 @@ void pages(int ph, int pw, int &vic, int &hp, int &eq, int &cloak, int &ff){
 		mvprintw(4, 3, "A teraz idź, od twoich czynów zależy przyszłość naszego kultu."); move(4,2);
 	}
 
+//7-6
+	
+	else if(ph==7 && pw==6){
+		attron(COLOR_PAIR(30));mvprintw(1, 50, "Brama Miejska");attroff(COLOR_PAIR(30));
+		mvprintw(4, 3, "Wychodząc z miasta jeden ze strażników w imię zasad grzmotnął cię w tył głowy.");move(4,2);
+		hp=hp-20;
+		life(hp, vic); getch();
+		
+		while(true){
+		
+			mvprintw(4, 3, "Nie było to zbyt miłe zachowanie. Chcesz odpłacić pięknym za nadobne?              ");
+			mvprintw(6, 6, "Dwóch na jednego?! Bułka z masłem. (w)");
+			mvprintw(8, 6, "Pas, nie warci są mojego czasu. (d)");move(4,2);
+
+			int wybory = getch();
+
+			if(wybory=='w' || wybory=='W'){
+				mvprintw(4, 3, "Z miejsca rozwaliłeś nos jednemu ze strażników. Chcieli zabawy to zabawę otrzymają.");
+				mvprintw(6, 6, "                                                             ");
+				mvprintw(8, 6, "                                                                 ");move(4,2); getch();
+				
+				if(eq==2){
+					mvprintw(4, 3, "Twój miecz mieni się w pełnej chwale. Powaliłeś dwóch strażników zanim pozostali czterej zdąrzyli dobiec.");
+					mvprintw(6, 6, "Wystarczy tej błazenady. Oddaliłeś się w blasku słońca.");move(4,2);
+					break;
+				} else{
+					mvprintw(4, 3, "Nie była to twoja najdumniejsza walka, lecz co rozwaliłeś to twoje.                                   ");move(4,2);
+					hp=hp-30;
+					life(hp, vic);
+					break;
+				}	
+			} else if(wybory=='d' || wybory=='D'){
+				mvprintw(4, 3, "Z daleka słyszysz śmiech i wyzwiska ze strony strażników. Zachowaj ten gniew. Na pewno nie jeden raz się przyda.              ");
+				mvprintw(6, 6, "                                                             ");
+				mvprintw(8, 6, "                                                                 ");move(4,2);
+				break;
+			}
+		}
+	}
+
+//3-8, 5-8, 7-8
+	
+	else if((ph==3 && pw==8) || (ph==5 && pw==8) || (ph==7 && pw==8)){
+	
+		attron(COLOR_PAIR(30));mvprintw(1, 50, "Wilgotne Polany");attroff(COLOR_PAIR(30));
+		if(slime==0){
+			mvprintw(4, 3, "Wilgotna rosa ociera się o twoje szaty. Świeże powietrze trafia do twoich nozdrzy. Dzień idealny."); move(4,2); getch();
+			mvprintw(4, 3, "No prawie. Ten jeden złowrogi Slime naciera właśnie w twoją stronę.                               "); move(4,2); getch();
+		} else if(slime==1){
+			mvprintw(4, 3, "Delektując się rześkim powietrzem, spoglądasz w dal, a zza pleców wyłania się Slime."); move(4,2); getch();
+		} else if(slime==2){
+			mvprintw(4, 3, "Ah jaki piękny ... kolejny Slime."); move(4,2); getch();
+		}
+		slime++;
+		
+		if(eq==2){
+			mvprintw(4, 3, "Trzy z miecza od lewej, raz od prawej i basta. Slime to dla mnie żadne wyzwanie.                "); move(4,2);
+		} else{
+			mvprintw(4, 3, "Wrrr, dlaczego się to tak klei. Ciekawe czy kiedykolwiek się domyję.                              "); move(4,2);
+			hp=hp-10;
+			life(hp,vic);
+		}
+		
+	}
+
+//3-10, 4-10, 5-10, 6-10, 7-10, 8-10
+	
+	else if(pw==10 && (ph==3 || ph==4 || ph==5 || ph==6 || ph==7 || ph==8)){
+		attron(COLOR_PAIR(30));mvprintw(1, 50, "Krasnale Domniemane Królestwo");attroff(COLOR_PAIR(30));
+		if(krasno==0){
+			mvprintw(4, 3, "Właśnie spotkałeś krasnala ogrodowego, który oznajmił ci że jest to teren ich nowo powstałego królestwa."); move(4,2); getch();
+			mvprintw(4, 3, "Oznajmił również, że ...                                                                                   "); move(4,2);
+			mvprintw(4, 3, "Zanim zdążył dokończyć spóściłeś mu łomot."); move(4,2);
+		} else if(krasno==1){
+			mvprintw(4, 3, "Właśnie spotkałeś dwa krasnale ogrodowego, które oznajmiły ci że jest to teren ich nowo powstałego królestwa."); move(4,2); getch();
+			mvprintw(4, 3, "Nie chciały cię przepuścić, więc musiałeś im spuścić łomot.                                                      "); move(4,2);
+			if(eq!=2){
+				hp=hp-10;
+				life(hp, vic);
+			}
+		} else if(krasno==2){
+			mvprintw(4, 3, "Właśnie spotkałeś trzy krasnale ogrodowego, które oznajmiły ci że jest to teren ich nowo powstałego królestwa."); move(4,2); getch();
+			mvprintw(4, 3, "Nie chciały cię przepuścić, więc musiałeś im spuścić łomot.                                                      "); move(4,2);
+			if(eq!=2){
+				hp=hp-20;
+				life(hp, vic);
+			}
+		} else if(krasno==3){
+			mvprintw(4, 3, "Właśnie spotkałeś cztery krasnale ogrodowego, które oznajmiły ci że jest to teren ich nowo powstałego królestwa."); move(4,2); getch();
+			mvprintw(4, 3, "Nie chciały cię przepuścić, więc musiałeś im spuścić łomot.                                                      "); move(4,2);
+			if(eq==2){
+				hp=hp-10;
+				life(hp, vic);
+			} else{
+				hp=hp-30;
+				life(hp, vic);
+			}
+		} else if(krasno==4){
+			mvprintw(4, 3, "Właśnie spotkałeś pięć krasnali ogrodowych, które oznajmiły ci że jest to teren ich nowo powstałego królestwa."); move(4,2); getch();
+			mvprintw(4, 3, "Nie chciały cię przepuścić, więc musiałeś im spuścić łomot.                                                      "); move(4,2);
+			if(eq==2){
+				hp=hp-20;
+				life(hp, vic);
+			} else{
+				hp=hp-40;
+				life(hp, vic);
+			}
+		} else if(krasno==5){
+			mvprintw(4, 3, "Właśnie spotkałeś sześć krasnali ogrodowych, które oznajmiły ci że jest to teren ich nowo powstałego królestwa."); move(4,2); getch();
+			mvprintw(4, 3, "Nie chciały cię przepuścić, więc musiałeś im spuścić łomot.                                                      "); move(4,2);
+			if(eq==2){
+				hp=hp-30;
+				life(hp, vic);
+			} else{
+				hp=hp-50;
+				life(hp, vic);
+			}
+		}
+		krasno++;
+	}
+	
 //3-12
 	
 	else if(ph==3 && pw==12){
@@ -215,7 +361,37 @@ void pages(int ph, int pw, int &vic, int &hp, int &eq, int &cloak, int &ff){
 			
 		}
 	}
+
+//5-12
 	
+	else if(ph==5 && pw==12){
+		
+		attron(COLOR_PAIR(30));mvprintw(1, 50, "Błotniste Równiny");attroff(COLOR_PAIR(30));
+		mvprintw(4, 3, "Lepkie błoto klei się do całego twojego rynsztunku, śmierdzący odór wypala ci nozdrza. Nie idealny dzień."); move(4,2); getch();
+		
+		if(slime==3){
+			mvprintw(4, 3, "Trzy Slimy gryzą kwiatki od spodu. Jeden więcej już nie robi różnicy. To że jest trochę większy i ma koronę nic nie zmienia."); move(4,2); getch();
+			mvprintw(4, 3, "A jednak zmienia. Walka rozgorzała na dobre. Epickie wymachy przecieły powietrze. Nawet wyszkolony żołnierz miałby problem by nadąrzyć za nimi wzrokiem. "); move(4,2); getch();
+			mvprintw(4, 3, "Pojedynek był tak EPICKI, że nie ma słów aby go opisać. I na końcu zwyciężca mógł być tylko jeden.                                                           "); move(4,2); getch();
+			
+			if(eq==2){
+				mvprintw(4, 3, "Stoisz wyprostowany na polu walki, lecz gorycz w twych ustach przykrywa cały blask zwycięstwa.                               "); move(4,2); getch();
+				mvprintw(4, 3, "Oto twój partner - drewniany miecz, leży połamany w błotnistej breji.                                "); move(4,2);
+				eq=0;
+				eqip(eq);
+			} else if (eq!=2){
+				hp=hp-30;
+				life(hp,vic);
+				mvprintw(4, 3, "To tak smakuje prawdziwe zwycięstwo. Padasz na glebę. Czas chyba na mały odpoczynek.                        "); move(4,2); getch();
+			}
+			if(hp<=0){
+					mvprintw(4, 3, "Ztrudzone oczy powoli się zamykają, cały ten smród i lepkość jakby przestaje ci przeskadzać. To chyba koniec ..    . "); move(4,2); getch();
+			}
+		} else{
+			mvprintw(4, 3, "Ale przynajmniej w tak brzydkim miejscu nie ma Slimów.                                                                         "); move(4,2); getch();
+		}
+	}	
+		
 //8-12
 	
 	else if(ph==8 && pw==12){
@@ -707,6 +883,31 @@ void pages(int ph, int pw, int &vic, int &hp, int &eq, int &cloak, int &ff){
 		}
 	}	
 
+//3-24, 4-24, 5-24, 6-24, 7-24, 2-26, 8-26
+	
+	else if((ph==3 && pw==24) || (ph==4 && pw==24) || (ph==5 && pw==24) || (ph==6 && pw==24) || (ph==7 && pw==24) || (ph==2 && pw==26) || (ph==8 && pw==26)){
+	
+		attron(COLOR_PAIR(30));mvprintw(1, 50, "Wejście do Kraju Ludzi");attroff(COLOR_PAIR(30));
+		
+		if(skipp==0){
+			if(cloak==0){
+				mvprintw(4, 3, "Najbardziej znany ludzki zdrajca wchodzi do ludzkiej stolicy jakgdyby nigdy nic. BEZ PRZEBRANIA. Co może pójść nie tak..."); move(4,2);getch();
+				mvprintw(4, 3, "Z każdym krokiem coraz więcej ludzi zbierało się na jego powitanie. W końcu poleciał pierwszy kamień.                           ");
+				hp=hp-10;
+				life(hp, vic); move(4,2);getch();
+				mvprintw(4, 3, "Po chwili w miejscu gdzie stał nasz antybohater leżała tylko ogromna góra kamieni i innych przyborów kuchennych.");  move(4,2);getch();
+				mvprintw(4, 3, "I tak właśnie pycha jednej osoby zgubiła setki istnień. Pandemia rozgorzała na nowo.                                ");  move(4,2);
+				vic=9;
+				skipp=1;
+			} else{
+				mvprintw(4, 3, "Antybohater nakrywszy się szatą wszedł niepostrzeżenie do ludzkiej krainy. Czas by zabawa doszła do punktu kulminacyjnego."); move(4,2);getch();
+				skipp=1;
+			}
+		} else{
+			mvprintw(4, 3, " ..."); move(4,2);
+		}
+	}
+	
 //8-24
 	
 	else if(ph==8 && pw==24){
@@ -921,13 +1122,13 @@ void pages(int ph, int pw, int &vic, int &hp, int &eq, int &cloak, int &ff){
 		}
 	}	
 
-	//5-28
+//5-28
 	
 	else if(ph==5 && pw==28){
 		
 		attron(COLOR_PAIR(30));mvprintw(1, 50, "Komnata Księżniczki");attroff(COLOR_PAIR(30));
-		mvprintw(4, 3, "I tak oto przybyłem moja księżniczko, twój koń na białbym rycerzu. Hehe. "); move(4,2); getch();
-		mvprintw(4, 3, "Jak nie chcesz widzieć swojej rodziny we krwi to lepiej pakuj manatki.    "); move(4,2); getch();
+		mvprintw(4, 3, "I tak oto przybyłem moja księżniczko, twój koń na białym rycerzu. Hehe. "); move(4,2); getch();
+		mvprintw(4, 3, "Jak nie chcesz widzieć swojej rodziny we krwi to lepiej pakuj manatki.    "); move(4,2);
 		vic=1;
 		
 	} 

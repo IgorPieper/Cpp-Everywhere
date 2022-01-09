@@ -61,6 +61,22 @@ void eqip(int eq){
 			mvprintw(29, 46 + met, "  ");
 		attroff(COLOR_PAIR(22));
 	} 
+
+//Drewniany Miecz
+	
+	else if(eq==2){
+	
+		attron(COLOR_PAIR(20));
+			mvprintw(22, 36 + met, "    ");
+			mvprintw(23, 36 + met, "  "); mvprintw(23, 40 + met, "  ");
+			mvprintw(24, 36 + met, "  "); mvprintw(24, 40 + met, "  ");
+			mvprintw(25, 36 + met, "  "); mvprintw(25, 40 + met, "  ");
+			mvprintw(26, 36 + met, "  "); mvprintw(26, 40 + met, "  ");
+			mvprintw(27, 34 + met, "          ");
+			mvprintw(28, 38 + met, "  ");
+			mvprintw(29, 38 + met, "  ");
+		attroff(COLOR_PAIR(20));
+	}
 	
 //Plastikowy miecz
 	
@@ -170,7 +186,24 @@ void eqip(int eq){
 			mvprintw(27, 36 + met, "      ");
 			mvprintw(28, 36 + met, "      ");
 			mvprintw(29, 36 + met, "      ");
-		attroff(COLOR_PAIR(20));
+		attroff(COLOR_PAIR(20));			
+	} 
+	
+//Pustka	
+	
+	else if (eq==0) {
+		attron(COLOR_PAIR(24));
+			mvprintw(21, 30 + met, "                    ");
+			mvprintw(22, 30 + met, "                    ");
+			mvprintw(23, 30 + met, "                    ");
+			mvprintw(24, 30 + met, "                    ");
+			mvprintw(25, 30 + met, "                    ");
+			mvprintw(26, 30 + met, "                    ");
+			mvprintw(27, 30 + met, "                    ");
+			mvprintw(28, 30 + met, "                    ");
+			mvprintw(29, 30 + met, "                    ");
+			mvprintw(30, 30 + met, "                    ");
+		attroff(COLOR_PAIR(24));
 
 	}
 	
