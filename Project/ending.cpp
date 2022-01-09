@@ -5,16 +5,52 @@ clear();
 	
 	attron(A_BOLD);
 	
+//Porwanie Księżniczki
+	
 	if (victory==1){
 		mvprintw(15,6,"Zakoczenie nr.1");
-	} else if(victory==2){
+	} 
+	
+// Dotarcie do ruin koloseum	
+	
+	else if(victory==2){
 		mvprintw(15,6,"Zakoczenie nr.2");
-	} else if(victory==3){
+	} 
+	
+// Zatrzymanie czasu	
+	
+	else if(victory==3){
 		mvprintw(15,6,"Zakoczenie nr.3");
-	} else if(victory==4){
+	} 
+	
+//	Zabrakło HP?
+	
+	else if(victory==4){
 		mvprintw(15,6,"Zakoczenie nr.4");
-	} else if(victory==5){
+	} 
+	
+// Nieudany eksperyment	
+	
+	else if(victory==5){
 		mvprintw(15,6,"Zakoczenie nr.5");
+	} 
+	
+// Nowy biznes	
+	
+	else if(victory==6){
+		mvprintw(15,6,"Zakoczenie nr.6");
+	}
+	
+// Lalka księżniczki	
+	
+	else if(victory==7){
+		mvprintw(15,6,"Zakoczenie nr.7");
+	}
+	
+//Wirus	
+	
+	else if(victory==8){
+		mvprintw(15,6,"Zakoczenie nr.8");
 	}
 	
 	attroff(A_BOLD);

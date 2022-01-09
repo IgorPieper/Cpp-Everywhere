@@ -12,6 +12,7 @@ int vic = 0;
 int hp = 100;
 int eq = 0;
 int cloak = 0;
+int ff = 1;
 
 auto main() -> int{
 
@@ -24,7 +25,7 @@ start(ph, pw, hp);
 
 while(true){
 	
-	pages(ph, pw, vic, hp, eq, cloak);
+	pages(ph, pw, vic, hp, eq, cloak, ff);
 	
 	if (vic>0){
 		victory(vic);

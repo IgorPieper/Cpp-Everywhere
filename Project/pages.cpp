@@ -2,7 +2,7 @@
 #include "life.cpp"
 #include "eqipment.cpp"
 
-void pages(int ph, int pw, int &vic, int &hp, int &eq, int &cloak){
+void pages(int ph, int pw, int &vic, int &hp, int &eq, int &cloak, int &ff){
 
 	clear();
 	life(hp,vic);
@@ -22,41 +22,22 @@ void pages(int ph, int pw, int &vic, int &hp, int &eq, int &cloak){
 
 //5-4
 	
+
 	if(ph==5 && pw==4){
 		
 		attron(COLOR_PAIR(30));mvprintw(1, 50, "Dziedziniec przed zamkiem Władcy Demonów");attroff(COLOR_PAIR(30));
-		mvprintw(4, 3, "...> Widzę, że rozmowa z Władcą była dla ciebie niemałą niespodzianką. Dostojność jego przemowy była zaiste bardzo ujmująca."); move(4,2);
-		mvprintw(6, 6, "Zaprawdę nikt nie spodziewał się, że tak ważne zadanie trafi do ludzkiego pomiota jakim się narodziłeś."); move(4,2); getch();
-		mvprintw(4, 3, "                                                                                                                             ");
-		mvprintw(6, 3, "                                                                                                                             ");
-		
-		
-		mvprintw(4, 3, "Człowiek> ..."); move(4,2); getch();
-			
-		mvprintw(4, 3, "Gerdan> Z twarzy imo jest całkowicie ludzki, lecz serce jego zdobi tylko mrok. Za jego wychowanie, stała jakże nie byle jaka królewska gwardia, ");
-		mvprintw(6, 6, " znana jak nie kto inny z najbrutalniejszego przestrzagania jego Mrocznej Podłości."); move(4,2); getch();
-		
-		mvprintw(4, 3, "Gerdan> Przemawiająca przez ciebie zazdrość wylewa się ciurkiem na wszystkich do okoła Rejzendryku. Pomimo niezerowego wkładu w plan Jego Upiornej Mości, ");
-		mvprintw(6, 6, " masz wyjątkowo dużo wolnego czasu, na dogryzanie biednemu Armenowi.                 "); move(4,2); getch();
-		
-		mvprintw(4, 3, "Rezendryk> Jak na służalca masz bardzo duży tupet, by tak się wyrażać do Głównego Dowódcy Sił Armii Cienia. Nawyk ten napewno przyniesie ci niegdyś zgubę.");
-		mvprintw(6, 6, " A co do ciebie smarkaczu, spróbuj tylko wrócić z zadania bez księżniczki, a osobiście ukrócę cię o czereb."); move(4,2); getch();
-		
-		mvprintw(4, 3, "Gerdan> Nie miej zazłe Rezendrykowi, jego ogromna potęga przyniosła chwałę Królestwie Mroku w nie jedenej bitwie. Najzwyczajniej jak każdy w tutejszych murach ma wątpliwości, ");
-		mvprintw(6, 6, " w powierzaniu tak ważnego zadania, człowiekowi, który nie zapisał się jeszcze na żadnej karcie historii naszego królestwa."); move(4,2); getch();
-		
-		mvprintw(4, 3, "Gerdan> Nie mniej czas już na nasze pożegnanie, jak będzie trzeba złapię kciuki wszystkich demonów w Królestwie za twoje powodzenie.                                            ");
-		mvprintw(6, 6, " Niech duch Bogini Podłości - Argeni, będzie po twojej stronie.                                                             "); move(4,2);
-		
-		mvprintw(1, 50, "                                                                                                            ");
-		mvprintw(6, 3, "                                                                                                                                                                                    ");
+		mvprintw(4, 3, "Czy tego chcę, czy nie. Sam władca demonów zlecił mi pojmanie księżniczki z przeciwległego królestwa."); move(4,2); getch();
+		mvprintw(4, 3, "Zdecydowanie nie będzie to łatwe zadanie, lecz raz się żyje. Jak tego nie zrobię to i tak Mroczny Generał skróci mnie o głowę."); move(4,2);
+		mvprintw(6, 6, "Gdyby to tylko była gra i mógłbym cofnąć czas..."); move(4,2); getch();
+                                                                                                                                                                                
 		attron(COLOR_PAIR(30));mvprintw(1, 50, "Poradnik");attroff(COLOR_PAIR(30));
 		mvprintw(4, 3, "Przyszedł czas na objaśnienie zasad gry                                                                                                                                      "); move(4,2); getch();
-		mvprintw(4, 3, "Twoim głównym celem jest pojmanie księżniczki znajdującej się w przeciwległym królestwie ludzi w polu oznaczonym literką M."); move(4,2); getch();
-		mvprintw(4, 3, "Po drodze czeka cię wiele przygód, bla bla bla wszyscy to znamy.                                                             "); move(4,2); getch();
+		mvprintw(4, 3, "Twoim głównym celem jest pojmanie księżniczki znajdującej się w przeciwległym królestwie ludzi w polu oznaczonym literką M."); move(4,2); getch();
+		mvprintw(4, 3, "Po drodze czeka cię wiele przygód, bla bla bla wszyscy to znamy.                                                             "); move(4,2); getch();
 		mvprintw(4, 3, "Twoja postać może poruszać się w 3 kierunkach, aczkolwiek nie może się cofać więc uważaj, gdyż może być to dosyć zgubne."); move(4,2); getch();
-		mvprintw(4, 3, "Monitoruj swój pasek życia i zbieraj przedmioty, które mogą ci się przydać przy odkrywaniu dodatkowych zakończeń.        "); move(4,2); getch();
-		mvprintw(4, 3, "To tyle ode mnie i życzę miłej gry                                                                                 "); move(4,2);
+		mvprintw(4, 3, "Monitoruj swój pasek życia i balansuj swoim ekwipunkiem a może odnajdziesz dodatkowe zakończenia.                        "); move(4,2); getch();
+		mvprintw(4, 3, "Upewnij się również, że znajdziesz jakiś płaszcz zanim wejdziesz do miasta.                         "); move(4,2); getch();
+		mvprintw(4, 3, "To tyle ode mnie i życzę miłej gry.                                                                                 "); move(4,2);
 		
 	} 
 	
@@ -104,7 +85,7 @@ void pages(int ph, int pw, int &vic, int &hp, int &eq, int &cloak){
 //3-4
 	
 	else if(ph==3 && pw==4) {
-		attron(COLOR_PAIR(30));mvprintw(1, 50, "Królewskie Ogrody");attroff(COLOR_PAIR(30));
+		attron(COLOR_PAIR(30));mvprintw(1, 50, "Królewskie Ogrody 2");attroff(COLOR_PAIR(30));
 		mvprintw(4, 3, "Różane ogrody ciągną się kilometrami. Tylko nieliczni są w stanie dostać się w sam środek tego bezlitosnego miejsca. ");
 		mvprintw(6, 6, "Stoi tu od dawien dawna, nikt nie wie jak długo fontanna tryskająca wodą rdzawego koloru."); move(4,2); getch();
 		
@@ -172,7 +153,7 @@ void pages(int ph, int pw, int &vic, int &hp, int &eq, int &cloak){
 		}
 	}
 	
-//6-6
+//6-4
 	
 	else if(ph==6 && pw==4) {
 		attron(COLOR_PAIR(30));mvprintw(1, 50, "Koszary");attroff(COLOR_PAIR(30));
@@ -195,6 +176,46 @@ void pages(int ph, int pw, int &vic, int &hp, int &eq, int &cloak){
 		mvprintw(6, 6, "Polana ta mimo że pięknym jest mirażem, kryje pod sobą hektolitry przelanej krwi ślepo powtarzającej się historii dzielnych umarlaków. "); move(4,2);
 	}
 
+//6-6
+	
+	else if(ph==6 && pw==6){
+		attron(COLOR_PAIR(30));mvprintw(1, 50, "Siedziba Kultystów");attroff(COLOR_PAIR(30));
+		mvprintw(4, 3, "W tym z pozoru rozpadającym się budynku można znaleźć rozległy kompleks podziemnych labiryntów. Tylko kultyści potrafią się w nim odnaleźć.");
+		mvprintw(6, 6, "Na szczęście udało mi się jednego z nich spotkać tuż przy wejściu."); move(4,2); getch();
+		
+		mvprintw(4, 3, "Ciemny kaptur przykrywał mu twarz, jego głos wydawał się dochodzić z wielu miejsc jednocześnie. Mam dla ciebie zadanie - rzekł.                ");
+		mvprintw(6, 6, "Weź ten list i dostarcz go do kultysty na moczarach, znajdziesz go wypowiadając ten złowrogi cytat."); move(4,2); getch();
+		
+		eq=5;
+		eqip(eq);
+		
+		mvprintw(4, 3, "Sed ut aliquid comedat dulce.                                                                                                         ");
+		mvprintw(6, 6, "                                                                                                                                        "); move(4,2); getch();
+		
+		mvprintw(4, 3, "A teraz idź, od twoich czynów zależy przyszłość naszego kultu."); move(4,2);
+	}
+
+//3-12
+	
+	else if(ph==3 && pw==12){
+		attron(COLOR_PAIR(30));mvprintw(1, 50, "Moczary");attroff(COLOR_PAIR(30));
+		mvprintw(4, 3, "Bagno otoczone gęstą mgłą. W powietrzu czuć zgnilinę i słychać cały pejzaż dźwięków, których nigdy nie chciałbyś słyszeć.");
+		mvprintw(6, 6, "Lepiej się z tego miejsca jak najszybciej wynieść."); move(4,2); getch();
+		
+		if(eq==5){
+		
+			mvprintw(4, 3, "Nadszedł czas na złowrogi cytat. Jest tylko jeden problem, nie pamiętam jak on brzmiał...                                       ");
+			mvprintw(6, 6, "                                                                                             "); move(4,2); getch();
+			
+			mvprintw(4, 3, "Gdy już miałeś odejść pojawiła się postać odziana w maskę przypominającą komara i rzekłą - Wyczuwam, że masz dla mnie list.");
+			mvprintw(6, 6, "Bardzo dobrze, weź teraz tą fiolkę i udaj się na zamglone wzgórze."); move(4,2);
+			
+			eq=6;
+			eqip(eq);
+			
+		}
+	}
+	
 //8-12
 	
 	else if(ph==8 && pw==12){
@@ -248,7 +269,7 @@ void pages(int ph, int pw, int &vic, int &hp, int &eq, int &cloak){
 			while(true){
 				mvprintw(4, 3, "Czy chcesz wymienić swój przedmiot, na plastikowy miecz?                                                                                          ");
 				mvprintw(6, 6, "Tak (w)                                                          ");
-				mvprintw(8, 6, "Nie (d)                                                          ");
+				mvprintw(8, 6, "Nie (d)                                                          "); move(4,2);
 				int wybory = getch();
 
 				if(wybory=='w' || wybory=='W'){
@@ -270,7 +291,82 @@ void pages(int ph, int pw, int &vic, int &hp, int &eq, int &cloak){
 		mvprintw(6, 6, "                                                             "); move(4,2);
 		
 	}
+
+//8-16
 	
+	else if(ph==8 && pw==16){
+		attron(COLOR_PAIR(30));mvprintw(1, 50, "Głęboki Dół");attroff(COLOR_PAIR(30));
+		mvprintw(4, 3, "Anty bohater idzie beztrosko po ośnieżonych górach. Nie patrzy pod nogi, mapę trzyma do góry nogami.");
+		mvprintw(6, 6, "Po prostu rewelacyjnie, co może pójść nie tak."); move(4,2); getch();
+		
+		mvprintw(4, 3, "Gigantyczna dziura przykryta śniegiem jasno oznaczona na mapie pojawiłą się jakby znikąd.             ");
+		mvprintw(6, 6, "Lot w dół był czasochłonny i wypełniony pytaniami retorycznymi."); move(4,2); getch();
+		
+		hp=hp-90;
+		life(hp, vic);
+		
+		if(hp>0){
+			mvprintw(4, 3, "Nie widzę logicznego wytłumaczenia na to jak udało ci się przeżyć... teraz tylko stąd wyjdź milordzie.");
+			mvprintw(6, 6, "                                                                                         "); move(4,2);
+		}
+	}
+
+//2-18
+	
+	else if(ph==2 && pw==18){
+		attron(COLOR_PAIR(30));mvprintw(1, 50, "Zatoka Piratów");attroff(COLOR_PAIR(30));
+		mvprintw(4, 3, "Kto by pomyślał, że spotkamy piratów na takich płyciznach. Do nich faktycznie można się dostać z każdego zakątka świata.");
+		mvprintw(6, 6, "Nawet jak władze ich zdejmą to zawsze wracają."); move(4,2); getch();
+		
+		mvprintw(4, 3, "Ściągneliśmy mapę z ich kajuty, pobraliśmy jedną łopatę z ich magazynu. A nawet przejrzeliśmy ich książki o Torze i Entach.");
+		mvprintw(6, 6, "                                                       "); move(4,2); getch();
+		
+		if(eq!=0){
+			while(true){
+				mvprintw(4, 3, "Czy chcesz wymienić swój przedmiot, na łopatę?                                                                                          ");
+				mvprintw(6, 6, "Tak (w)                                                          ");
+				mvprintw(8, 6, "Nie (d)                                                          "); move(4,2);
+				int wybory = getch();
+
+				if(wybory=='w' || wybory=='W'){
+					eq=9;
+					eqip(eq);
+					mvprintw(6, 3, "                                                             ");
+					mvprintw(8, 3, "                                                             ");
+					break;
+				} else if (wybory=='d' || wybory=='D'){
+					mvprintw(4, 3, "                                                             ");
+					mvprintw(8, 3, "                                                             ");
+					break;
+				}
+			}
+		} else{
+			eq=9;
+			eqip(eq);
+		}
+		
+		mvprintw(4, 3, "Idąc za wskazówkami, skarb powinien się znajdować na polu otoczonym z dwóch stron miastem.                                    "); move(4,2);
+	}
+	
+//7-18
+	
+	else if(ph==7 && pw==18){
+		attron(COLOR_PAIR(30));mvprintw(1, 50, "Zamglone wzgórze");attroff(COLOR_PAIR(30));
+		mvprintw(4, 3, "Mgła gęsta jak mleko. Mimo usilnych prób nie jesteś w stanie zrobić z niej płatków. Oczywiście najpierw wlewając mleko.");
+		mvprintw(6, 6, "Dodatkowo płatki wrzucając dopiero po podgrzaniu mleka."); move(4,2); getch();
+		
+		if(eq==6){
+		
+			mvprintw(4, 3, "Ciekawe co było pierwsze mgła, czy kultyści.                                                                          ");
+			mvprintw(6, 6, "                                                                                             "); move(4,2); getch();
+			
+			mvprintw(4, 3, "Z losowej dziury w ziemi wychodzi kultysta ubrany w maskę kreta i rzecze - Za prawdę powiadam ci mleko dobre jest, ale tylko bezlaktozy.");
+			mvprintw(6, 6, "A teraz weź ten patyk nie mówiąc nic i zanieś go do kultysty mieszkającego w ciemnym lesie"); move(4,2);
+			eq=7;
+			eqip(eq);
+		}
+	}
+
 //3-20
 	
 	else if(ph==3 && pw==20){
@@ -433,7 +529,7 @@ void pages(int ph, int pw, int &vic, int &hp, int &eq, int &cloak){
 		while(true){
 		
 			mvprintw(4, 3, "Czerwony> Impostor is Among Us (w)");
-			mvprintw(6, 3, "Żółty> Nie jestem Impostorem (a)");
+			mvprintw(6, 3, "Żółty> Nie jestem Impostorem (d)");
 			mvprintw(8, 3, "Zielony> Ktoś z nas kłamie i na pewno nie jest to Czerwony (s)");
 			mvprintw(10, 3, "Kto jest SUS?"); move(10,2);
 
@@ -449,7 +545,7 @@ void pages(int ph, int pw, int &vic, int &hp, int &eq, int &cloak){
 				mvprintw(4, 3, "     Impostor Victory"); move(4,2);
 				life(hp,vic);
 				break;
-			} else if(wyboryy=='a' || wyboryy=='A'){
+			} else if(wyboryy=='d' || wyboryy=='D'){
 				mvprintw(4, 3, "     Victory"); move(4,2);
 				break;	
 			}
@@ -515,7 +611,6 @@ void pages(int ph, int pw, int &vic, int &hp, int &eq, int &cloak){
 								mvprintw(6, 6, "                                                                             ");
 								mvprintw(8, 6, "                                                                          "); move(4,2);  getch();
 								mvprintw(4, 3, "Niespodziewanie małpa usiadła koło ciebie i doceniając twoją determinację wręczyła ci czerwony kapturek.                                      ");move(4,2);
-								cloak=1;
 								break;
 							} else{
 								mvprintw(4, 3, "Po prostu odchodzisz, nie masz już nawet nerwów by cokolwiek jej odpowiedzieć.                                                                 ");
@@ -545,6 +640,26 @@ void pages(int ph, int pw, int &vic, int &hp, int &eq, int &cloak){
 		}
 		mvprintw(4, 3, "Jak Ja nienawidzę małp.                                                                                                                                 ");move(4,2);
 	}
+
+//4-22
+	
+	else if(ph==4 && pw==22){
+		attron(COLOR_PAIR(30));mvprintw(1, 50, "Ciemny Las");attroff(COLOR_PAIR(30));
+		mvprintw(4, 3, "W zasadzie las ten nawet nie jest ciemny. Po prostu jest tu sporo mgły. Ciekawe kto wymyśla nazwy tych wszystkich krain.");
+		mvprintw(6, 6, "Niektóre takie jak ta są takie jakby na siłe.              "); move(4,2); getch();
+		
+		if(eq==7){
+		
+			mvprintw(4, 3, "Czekasz na kultystę godzinę, dwie, trzy, czternaście i gdy masz już zrezygnować to zjawia się On kultysta w stroju dinozaura.  ");
+			mvprintw(6, 6, "Sorki korki na koniostradzie były - rzecze.             "); move(4,2); getch();
+			
+			mvprintw(4, 3, "Dobrze jesteśmy coraz bliżej celu. Weź teraz te najmniejsze skrzypce na świecie i zanieś do sklepu z rupieciami.");
+			mvprintw(6, 6, "A i zanim pójdziesz weź też ten płaszcz kultysty. Przyda ci się aby wejść do miasta"); move(4,2);
+			cloak=1;
+			eq=8;
+			eqip(eq);
+		}
+	}	
 	
 //8-22
 	
@@ -554,10 +669,10 @@ void pages(int ph, int pw, int &vic, int &hp, int &eq, int &cloak){
 		mvprintw(4, 3, "Przechodząc nieopodal dostrzegłeś siedzibę bandytów. Jej neonowe odwrócone trzy litery L biły po oczach nawet z wielu kilometrów.");
 		mvprintw(6, 6, "Bez chwili zawahania postanowiłeś złożyć im małą wizytę."); move(4,2); getch();
 		
-		mvprintw(4, 3, "Szczęście to czy pech - Nie wiem, aczkolwiek w środku był tylko jeden bandyta bez ręki. Jego silny metaliczny głos zaproponował ci małą grę.");
+		mvprintw(4, 3, "Szczęście to czy pech - Nie wiem, aczkolwiek w środku był tylko jeden bandyta bez ręki. Jego silny metaliczny głos zaproponował ci małą grę.");
 		mvprintw(6, 6, "Po chwili zastanowienia przystałeś na jego propozycję, w końcu to tylko jedna gra."); move(4,2); getch();
 		
-		mvprintw(4, 3, "Po 347 próbie udało ci się trafić jackpot. Te 3 dni ciągłej gry były tego warte. Wygrane bilety możesz wymienić na jeden z 3 przedmiotów.       ");
+		mvprintw(4, 3, "Po 347 próbie udało ci się trafić jackpot. Te 3 dni ciągłej gry były tego warte. Wygrane bilety możesz wymienić na jeden z 3 przedmiotów.       ");
 		mvprintw(6, 6, "                                                                                    "); move(4,2); getch();
 		
 		while(true){
@@ -590,17 +705,247 @@ void pages(int ph, int pw, int &vic, int &hp, int &eq, int &cloak){
 			}
 		
 		}
+	}	
+
+//8-24
+	
+	else if(ph==8 && pw==24){
+	
+		attron(COLOR_PAIR(30));mvprintw(1, 50, "Doświadczona Polana");attroff(COLOR_PAIR(30));
+		mvprintw(4, 3, "To miejsce wygląda jakoś znajomo. Wzgórza porośnięte idealnie zieloną trawą. Piękne błękitne niebo i te chumrki.");
+		mvprintw(6, 6, "Gdyby tylko dało się ten widoczek przez okienko jakoś uwiecznić. Tak by każdy mógł go zobaczyć.                   "); move(4,2); getch();
+		
+		mvprintw(4, 3, "A cóż to tam wiatr niesie. Przed oczami przelatuje ci czerwono-zielono-niebiesko-żółta flaga.                  ");
+		mvprintw(6, 6, "                                                                                                             "); move(4,2); getch();
+		
+		if(eq==9){
+			mvprintw(4, 3, "Najwyraźniej to tu piraci zakopali mój skarb.                                                                   ");move(4,2); getch();
+			mvprintw(4, 3, "Zaczynasz kopać. Ciszę przebija metalowy brzdęk. Twym oczom ukazuje się skrzynia. No to czas ją otworzyć.       ");move(4,2); getch();
+			mvprintw(4, 3, "To Wir... q   7263  19283   113-0   0111 XP   Win---s   njsgnvpiovinsdxpgvnsvs..     0               p          ");move(4,2);
+			vic=8;
+		}
+		
+		
 	}
 	
-//5-28
+//4-26
+	
+	else if(ph==4 && pw==26){
+		attron(COLOR_PAIR(30));mvprintw(1, 50, "Jubiler");attroff(COLOR_PAIR(30));
+		mvprintw(4, 3, "Asortyment mieni się i błyszczy. Zdobione zbroje, nieskazitelne różdżki i te klejnoty.");
+		mvprintw(6, 6, "Ceny tylko zabójcze. 10 sztabek złota za cegłę znanej marki?!"); move(4,2); getch();
+		
+		mvprintw(4, 3, "O strefa szkieł. Jeden zły ruch i całe życie może skończyć się ruiną. Od tych kosztowności zaczyna cię boleć głowa.");
+		mvprintw(6, 6, "                                                                   "); move(4,2); getch();
+		
+		if(eq==4){
+			mvprintw(4, 3, "A więc chcesz odsprzedać mi ten Amulet? Uważasz mnie za głupca?! Nawet dziecko jest w stanie stwierdzić, że to złoto głupców.");
+			mvprintw(6, 6, "Wynoś się i nigdy nie wracaj "); move(4,2);
+		}
+	}	
+
+//5-26
+	
+	else if(ph==5 && pw==26){
+		
+		int zly = 50;
+		int razA=1;
+		int razB=1;
+		int razC=1;
+		int razD=1;
+		int razE=1;
+		
+		attron(COLOR_PAIR(30));mvprintw(1, 50, "Wejście do Zamku Królewskiego");attroff(COLOR_PAIR(30));
+		mvprintw(4, 3, "Wielkie wrota stoją otworem, minęły lata od kiedy mogłeś ten widok uświadczyć ostatni raz."); move(4,2); getch();
+		mvprintw(4, 3, "Teraz już tylko jedna osoba może cię powstrzymać i stoi ona naprzeciw ciebie."               ); move(4,2); getch();
+		mvprintw(4, 3, "Zastanawiasz się gdzie armia, królewska gwardia?                                                 ");  move(4,2); getch();
+		mvprintw(4, 3, "Pandemia jest. Ostatnie na co może sobie królestwo ludzi pozwolić do gromadzenie dużej ilości ludzi na małym obszarze.            "); move(4,2); getch();
+		mvprintw(4, 3, "Teraz nie ma już odwrotu czas zmierzyć się z ostatnim obrońcą zamku królewskiego.                                         "); move(4,2); getch();
+		
+		ff=0;
+		
+		while(true){
+		
+			mvprintw(4, 3, "Twój ruch:                                                                                                                      ");
+			mvprintw(6, 6, ">Zaatakuj (w)                                                                                                                   "); move(4,2);
+
+			int wybory = getch();
+
+			if(zly==0){
+				mvprintw(4, 3, "Więc to koniec, twój własny ojciec ledwo łapie wdech przed tobą. Jesteś z siebie dumny? Naprawdę było warto?");
+				mvprintw(6, 6, ">Zabij sumienie (dowolny klawisz)"); move(4,2);  getch();
+				break;	
+			} else if(zly==50 && razA==1){
+				mvprintw(4, 3, "Byłem niegdyś nadzieją tego kraju, teraz jestem jej największą rozpaczą.");
+				mvprintw(6, 6, "                                               "); move(4,2);  getch();
+				razA=0;
+			} else if(zly==40 && razB==1){
+				mvprintw(4, 3, "Chciałem tak niewiele, lecz wszyscy mnie opuściliście. TO jest moja zemsta.");
+				mvprintw(6, 6, "                                               "); move(4,2);  getch();
+				razB=0;
+			} else if(zly==30 && razC==1){
+				mvprintw(4, 3, "Może gdzieś w alternatywnym świecie, wspólnie podbijamy teraz świat demonów...");
+				mvprintw(6, 6, "                                               "); move(4,2);  getch();
+				razC=0;
+			} else if(zly==20 && razD==1){
+				mvprintw(4, 3, "To okrutne że nie ma już odwrotu. Klamra zapadła, przeznaczenia już nie można zmienić");
+				mvprintw(6, 6, "                                               "); move(4,2);  getch();
+				razD=0;
+			} else if(zly==10 && razE==1){
+				mvprintw(4, 3, "Zimne krople ukratkiem zaczeły spływać po twoim policzku. Lecz zimny wzrok oponenta nie dawał ci chwili na otaricie łez.");
+				mvprintw(6, 6, "                                               "); move(4,2);  getch();
+				razE=0;
+			}
+
+			if(wybory=='w' || wybory=='W'){
+				zly=zly-10;
+			}
+				hp=hp-10;
+				life(hp,vic);
+			if(hp==0){
+				mvprintw(4, 3, "                                                                                                                         ");
+				mvprintw(6, 6, "                                                                                                                         ");
+				victory(vic);
+				break;
+			}
+		}
+	}
+	
+//6-26
+	
+	else if(ph==6 && pw==26){
+		attron(COLOR_PAIR(30));mvprintw(1, 50, "Sklep z Antykami");attroff(COLOR_PAIR(30));
+		mvprintw(4, 3, "1001 Rupieci to nazwa tegoż sklepu. Znajdziesz tu wszystko od starych pajęczyn po nowe kurze.");
+		mvprintw(6, 6, "W zasadzie nic co mogło by ci się przydać."); move(4,2); getch();
+		
+		if(eq==8){
+		
+			mvprintw(4, 3, "O więc interesują cię nici, a nie czekaj wyczuwam że masz coś drogocennego przy sobie. Powiedział kultysta odziany w maskę konia.");
+			mvprintw(6, 6, "Oddałeś kultyście najmniejsze skrzypce na świecie."); move(4,2);
+			eq=0;
+			eqip(eq); getch();
+			mvprintw(4, 3, "Miałem na myśli twoje serce, lecz widzę że przyszedłeś tu w nieco ciekawszych interesach. Bardzo dobrze.                    ");
+			mvprintw(6, 6, "                                                                              "); move(4,2);
+			
+			mvprintw(4, 3, "Zdobywszy zaufanie kultystów stałeś się oficjalnie ich kompanem. Otworzyło ci to zupełnie nową ścieżkę zawodową.");
+			mvprintw(6, 6, "Założyliście wspólnie spółkę transportową i zbiliście fortunę na sprzedarzy broni wszystkim stronom konfliktu.    "); move(4,2);
+			vic=6;
+		}
+	}	
+
+//2-28	
+	
+	else if(ph==2 && pw==28){
+		attron(COLOR_PAIR(30));mvprintw(1, 50, "Ruiny Areny");attroff(COLOR_PAIR(30));
+		mvprintw(4, 3, "Za czasów świetności to miejsce mieściło tysiące ludzi jednocześnie. Dziś to jedynie puste mury. "); move(4,2); getch();
+		mvprintw(4, 3, "Idąc w głąb trafiasz na środek areny. Po twoich dawnych wyczynach pozostał jedynie grób na środku. "); move(4,2); getch();
+		mvprintw(4, 3, "Na koniec nikt z nas nie spełnił swojej obietnicy co? Siadasz przy grobie.                          "); move(4,2); getch();
+		
+		if(eq==1){
+			mvprintw(4, 3, "Zaczynasz wspominać stare dzieje. Wspólne lata, przygody, zmartwienia. Wszystko jest takie odległe."); move(4,2); getch();
+			mvprintw(4, 3, "Kładziesz różę na grobie. Czas wydaje się zatrzymać.                                                     "); move(4,2); getch();
+			mvprintw(4, 3, "Nie poczekaj on faktycznie się zatrzymał. Wieczne cierpienie w świecie bez ciebie. Czy to moja kara?   "); move(4,2);
+			vic=3;
+		} else{
+			mvprintw(4, 3, "Czas zaczyna wydawać się jedynie złudzeniem. Powoli zapadasz w sen.                 "); move(4,2);
+			vic=2;
+		}
+	}
+	
+//4-28 i 6-28
+	
+	else if((ph==4 && pw==28) || (ph==6 && pw==28)){
+		
+		int zly = 50;
+		int razA=1;
+		int razB=1;
+		int razC=1;
+		int razD=1;
+		int razE=1;
+		
+		attron(COLOR_PAIR(30));mvprintw(1, 50, "Boczne wejście do Zamku Królewskiego");attroff(COLOR_PAIR(30));
+		mvprintw(4, 3, "Boczne wejście prowadzi prosto do pokoju księżniczki. Ktokolwiek je stworzył zrobił mi bardzo dużą przysługę."); move(4,2); getch();
+		if(ff==1){
+			mvprintw(4, 3, "Teraz już tylko jedna osoba może cię powstrzymać i stoi ona naprzeciw ciebie."               ); move(4,2); getch();
+			mvprintw(4, 3, "Zastanawiasz się gdzie armia, królewska gwardia?                                                 ");  move(4,2); getch();
+			mvprintw(4, 3, "Pandemia jest. Ostatnie na co może sobie królestwo ludzi pozwolić do gromadzenie dużej ilości ludzi na małym obszarze.            "); move(4,2); getch();
+			mvprintw(4, 3, "Teraz nie ma już odwrotu czas zmierzyć się z ostatnim obrońcą zamku królewskiego.                                         "); move(4,2); getch();
+
+			ff=0;
+
+			while(true){
+
+				mvprintw(4, 3, "Twój ruch:                                                                                                                      ");
+				mvprintw(6, 6, ">Zaatakuj (w)                                                                                                                   "); move(4,2);
+
+				int wybory = getch();
+
+				if(zly==0){
+					mvprintw(4, 3, "Więc to koniec, twój własny ojciec ledwo łapie wdech przed tobą. Jesteś z siebie dumny? Naprawdę było warto?");
+					mvprintw(6, 6, ">Zabij sumienie (dowolny klawisz)"); move(4,2);  getch();
+					break;	
+				} else if(zly==50 && razA==1){
+					mvprintw(4, 3, "Byłem niegdyś nadzieją tego kraju, teraz jestem jej największą rozpaczą.");
+					mvprintw(6, 6, "                                               "); move(4,2);  getch();
+					razA=0;
+				} else if(zly==40 && razB==1){
+					mvprintw(4, 3, "Chciałem tak niewiele, lecz wszyscy mnie opuściliście. TO jest moja zemsta.");
+					mvprintw(6, 6, "                                               "); move(4,2);  getch();
+					razB=0;
+				} else if(zly==30 && razC==1){
+					mvprintw(4, 3, "Może gdzieś w alternatywnym świecie, wspólnie podbijamy teraz świat demonów...");
+					mvprintw(6, 6, "                                               "); move(4,2);  getch();
+					razC=0;
+				} else if(zly==20 && razD==1){
+					mvprintw(4, 3, "To okrutne że nie ma już odwrotu. Klamra zapadła, przeznaczenia już nie można zmienić");
+					mvprintw(6, 6, "                                               "); move(4,2);  getch();
+					razD=0;
+				} else if(zly==10 && razE==1){
+					mvprintw(4, 3, "Zimne krople ukratkiem zaczeły spływać po twoim policzku. Lecz zimny wzrok oponenta nie dawał ci chwili na otaricie łez.");
+					mvprintw(6, 6, "                                               "); move(4,2);  getch();
+					razE=0;
+				}
+
+				if(wybory=='w' || wybory=='W'){
+					zly=zly-10;
+				}
+					hp=hp-10;
+					life(hp,vic);
+				if(hp==0){
+					mvprintw(4, 3, "                                                                                                                         ");
+					mvprintw(6, 6, "                                                                                                                         ");
+					victory(vic);
+					break;
+				}
+			}
+		}
+	}	
+
+	//5-28
 	
 	else if(ph==5 && pw==28){
 		
-		mvprintw(0, 0, "Konice lol");
+		attron(COLOR_PAIR(30));mvprintw(1, 50, "Komnata Księżniczki");attroff(COLOR_PAIR(30));
+		mvprintw(4, 3, "I tak oto przybyłem moja księżniczko, twój koń na białbym rycerzu. Hehe. "); move(4,2); getch();
+		mvprintw(4, 3, "Jak nie chcesz widzieć swojej rodziny we krwi to lepiej pakuj manatki.    "); move(4,2); getch();
 		vic=1;
 		
-	} else{
-		mvprintw(1, 2, "Nic ciekawego cię w tym miejscu nie czekało");
+	} 
+	
+//8-28	
+	
+	else if(ph==8 && pw==28){
+		
+		attron(COLOR_PAIR(30));mvprintw(1, 50, "Sklep z Zabawkami");attroff(COLOR_PAIR(30));
+		mvprintw(4, 3, "Jesteś pewny, że Władca demonów chciał Lalkę Księżniczki z Księżyca?"); move(4,2); getch();
+		mvprintw(4, 3, "Rób co chcesz, ale nie mów później, że nie ostrzegałam - LOGIKA.             "); move(4,2);
+		vic=7;
+		
+	} 
+	
+	else{
+		attron(COLOR_PAIR(30));mvprintw(1, 50, "Pustkowia");attroff(COLOR_PAIR(30));
+		mvprintw(4, 3, "Rozglądając się dookoła nic nie zwróciło twojej uwagi");
 	}
 	
 	attroff(A_BOLD);
