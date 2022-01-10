@@ -188,6 +188,16 @@ void pages(int ph, int pw, int &vic, int &hp, int &eq, int &cloak, int &ff){
 		eq=2;
 		eqip(eq);
 	}
+
+//3-6
+	
+	else if(ph==3 && pw==6) {
+		attron(COLOR_PAIR(30));mvprintw(1, 50, "Ciemna Polana");attroff(COLOR_PAIR(30));
+		mvprintw(4, 3, "Kraina Demonów znana jest ze swojej wszechobecnej czarnej trawy. Występuje ona w każdym zakątku tej krainy."); move(4,2); getch();
+		mvprintw(4, 3, "Między kępami, bardzo rzadko można spotkać życiodajne rośliny. Są one koloru czerwonego ze zwięczeniem w kształcie serca."); move(4,2); getch();
+		mvprintw(4, 3, "Zjedzenie takiej odbudowuje martwe komórki i podobno potrafi przywracać nawet martwych do życia.                              "); move(4,2); getch();
+		mvprintw(4, 3, "Niestety przez swoje właściwości, rośliny te są tak bardzo wytrzewione, że nie ma szans abyś taką znalazł. "); move(4,2);
+	}	
 	
 //5-6
 	
@@ -317,6 +327,28 @@ void pages(int ph, int pw, int &vic, int &hp, int &eq, int &cloak, int &ff){
 		
 	}
 
+//4-8
+	
+	else if(ph==4 && pw==8){
+		attron(COLOR_PAIR(30));mvprintw(1, 50, "Polanna Niespodzianka");attroff(COLOR_PAIR(30));
+		mvprintw(4, 3, "Jest rano, a ty właśnie rozpoczynasz swoją podróż. Jeszcze z zaspanymi oczami wyruszasz przed siebie."); move(4,2); getch();
+		mvprintw(4, 3, "A raczej taki miałeś plan, zrobiłeś zaledwie parenaście kroków i wdepnąłeś w kaktusa. Tak KAKTUSA na środku polany."); move(4,2); getch();
+		hp=hp-10;
+		life(hp, vic);
+		mvprintw(4, 3, "Następnym razem zapamiętasz, aby nie wstawać z lewej nogi.                                                             "); move(4,2);
+	}
+	
+//2-10
+	
+	else if(ph==2 && pw==10){
+		attron(COLOR_PAIR(30));mvprintw(1, 50, "Żabie zalewisko");attroff(COLOR_PAIR(30));
+		mvprintw(4, 3, "Nie bój żaby, są rzeczy straszniejsze na tym świecie. Jak żywe kamienie, czy chodniki. "); move(4,2); getch();
+		mvprintw(4, 3, "Kurki czyli zakopane kury z grzybią czupryną, Kaczury czyli ogromne kaczki z wąsami jak kot."); move(4,2); getch();
+		mvprintw(4, 3, "Traworośle, czyli pnącza wciągające i duszące pod wodą...                                         "); move(4,2); getch();
+		mvprintw(4, 3, "Gdy już miałeś odejść dostrzegłeś armię żab uzbrojonych po zęby. Dosłownie nawet naparstki z ostrzami miały. "); move(4,2); getch();
+		mvprintw(4, 3, "Zostawiłeś krasnoludka podróżnika przemierzającego wodne tereny międzynarodowe na pastwę żab.                    "); move(4,2);
+	}
+	
 //3-10, 4-10, 5-10, 6-10, 7-10, 8-10
 	
 	else if(pw==10 && (ph==3 || ph==4 || ph==5 || ph==6 || ph==7 || ph==8)){
@@ -324,7 +356,7 @@ void pages(int ph, int pw, int &vic, int &hp, int &eq, int &cloak, int &ff){
 		if(krasno==0){
 			mvprintw(4, 3, "Właśnie spotkałeś krasnala ogrodowego, który oznajmił ci że jest to teren ich nowo powstałego królestwa."); move(4,2); getch();
 			mvprintw(4, 3, "Oznajmił również, że ...                                                                                   "); move(4,2);
-			mvprintw(4, 3, "Zanim zdążył dokończyć spóściłeś mu łomot."); move(4,2);
+			mvprintw(4, 3, "Zanim zdążył dokończyć spuściłeś mu łomot."); move(4,2);
 		} else if(krasno==1){
 			mvprintw(4, 3, "Właśnie spotkałeś dwa krasnale ogrodowego, które oznajmiły ci że jest to teren ich nowo powstałego królestwa."); move(4,2); getch();
 			mvprintw(4, 3, "Nie chciały cię przepuścić, więc musiałeś im spuścić łomot.                                                      "); move(4,2);
@@ -423,7 +455,22 @@ void pages(int ph, int pw, int &vic, int &hp, int &eq, int &cloak, int &ff){
 			mvprintw(4, 3, "Ale przynajmniej w tak brzydkim miejscu nie ma Slimów.                                                                         "); move(4,2); getch();
 		}
 	}	
+
+//6-12
+	
+	else if(ph==6 && pw==12){
 		
+		attron(COLOR_PAIR(30));mvprintw(1, 50, "Jasna Strona");attroff(COLOR_PAIR(30));
+		mvprintw(4, 3, "Drogi pamiętniczku. Dzisiejszy dzień nie zaczął się zbyt dobrze."); move(4,2); getch();
+		mvprintw(4, 3, "Gdy tylko wstałem, zorientowałem się że jestem cały pogryziony przez mrówki. Całe ciało mnie strasznie szczypie i nie mogę się przestać drapać"); move(4,2); getch();
+		mvprintw(4, 3, "Na śniadanie próbowałem zjeść ostatniego podpłomyka, którego przygotowałem na tą wyprawę, lecz zapomniałem że zjadłem go wczoraj.                 "); move(4,2); getch();
+		mvprintw(4, 3, "Wykąpać też się nie mogłem, gdyż nigdzie w pobliżu nie mogłem znaleźć wody. A przy próbie umycia zębów szczoteczka wylądowała w błocie."); move(4,2); getch();
+		mvprintw(4, 3, "Drogi pamiętniczku, jest dopiero dziesiąta. Boję się że mogę nie dożyć jutra.          .            ..                  Czy to niedźwiedź?    .           .          "); move(4,2); getch();
+		mvprintw(4, 3, "Ku przestrodze . . . nigdy nie rozbijaj lustra drabiną patrząc na czarnego kota, który gra na tamburynie.                                                      "); move(4,2); getch();
+		mvprintw(4, 3, "...                                                                                                                    "); move(4,2); getch();
+		mvprintw(4, 3, "Wyrzuciłeś znaleziony dziennik. CO za głupstwo przecież w tym świecie jeszcze nie ma luster. Czekaj CO?"); move(4,2);
+	}
+	
 //8-12
 	
 	else if(ph==8 && pw==12){
@@ -446,6 +493,18 @@ void pages(int ph, int pw, int &vic, int &hp, int &eq, int &cloak, int &ff){
 		life(hp,vic);
 		mvprintw(4, 3, "Do końca swoich dni będziesz dziękował swemu ciału za tak szybki refleks, ");
 		mvprintw(6, 6, "  który pozwolił ci odskoczyć wystarczająco daleko by uniknąć śmiertelnych obrażeń.  "); move(4,2);
+	}
+
+//2-14
+	
+	else if(ph==2 && pw==14){
+		attron(COLOR_PAIR(30));mvprintw(1, 50, "Nie głęboka woda");attroff(COLOR_PAIR(30));
+		mvprintw(4, 3, "Czy to Kra-b-ken?! Legendarny morski potwór, zatapiający statki swoimi gigantycznymi szczypcami. CO oN TutAj rOBi? "); move(4,2); getch();
+		mvprintw(4, 3, "Ale serio ta woda nawet nie jest głęboka. W najgłębszym miejscu był może z metr głębokości.                             "); move(4,2); getch();
+		mvprintw(4, 3, "Naprawdę nie wiem kto to wymyślił, aczkolwiek naciągnął granice fizyki na zupełnie nowy level.  "); move(4,2); getch();
+		hp=hp-10;
+		life(hp, vic);
+		mvprintw(4, 3, "Twoje wywody ściągnęły na ciebie karę z niebios. Grzmot z czystego nieba też był zacnym zjawiskiem.  "); move(4,2);
 	}
 	
 //4-14
@@ -473,7 +532,136 @@ void pages(int ph, int pw, int &vic, int &hp, int &eq, int &cloak, int &ff){
 		mvprintw(4, 3, "Sorry Mareczku, naprawdę nie chciałem z tym tak zwlekać. Wiem, że masz żonę i dwójkę dzieci i potrzebujesz bym ci te pieniądze oddał."); move(4,2); getch();
 		mvprintw(4, 3, "Mareczku? ... prysnąłeś w siną dal, byle jak najdalej od tego miejsca.                                                                     "); move(4,2);
 	}
+
+//3-16
 	
+	else if(ph==3 && pw==16){
+		attron(COLOR_PAIR(30));mvprintw(1, 50, "Komarze Moczary");attroff(COLOR_PAIR(30));
+		mvprintw(4, 3, "Właśnie użarł cię komar."); move(4,2); getch();
+		hp=hp-20;
+		life(hp, vic);
+		
+		int licznik = 0;
+		
+		while(true){
+		
+			mvprintw(4, 3, "Jeśli chcesz odzyskać stracone życie, musisz zabić komara");
+			mvprintw(6, 6, "> Uderz komara (w)");
+			mvprintw(8, 6, "> Odejdź (d)");move(4,2);
+			
+			int wybory = getch();
+			
+			if(wybory=='w' || wybory=='W' || wybory=='d' || wybory=='D'){
+				
+			mvprintw(6, 6, "                                                 ");
+			mvprintw(8, 6, "                                                 ");
+				
+				if(licznik==12){
+					mvprintw(4, 3, "Właśnie obrzezałeś komara. Ten fakt tak go zabolał, że postanowił oddać ci krew.  ");move(4,2);
+					hp=hp+20;
+					life(hp, vic);
+					break;
+				} else{
+					mvprintw(4, 3, "Pudło                                                     ");move(4,2); getch();
+					licznik++;
+				}
+			}else if (wybory=='s' || wybory=='S'){
+				break;
+			}
+		}
+	}
+	
+//5-16
+	
+	else if(ph==5 && pw==16){
+		attron(COLOR_PAIR(30));mvprintw(1, 50, "Kraina Zagadek");attroff(COLOR_PAIR(30));
+		mvprintw(4, 3, "Przed oczami pojawiła ci się magiczna istota odziana w kapelusz, płaszcz i maskę zakrywającą twarz."); move(4,2); getch();
+		mvprintw(4, 3, "Oznajmiła iż musisz rozwiązać trzy zagadki inaczej czeka cię sroga kara. Oto treść pierwszej zagadki:      "); move(4,2); getch();
+		
+		while(true){
+
+			mvprintw(4, 3, "Gargulec - ojciec Kamila ma trzech synów. Kolejno Kacpra, Melchiora i ostatniego imienia nie pamiętam. Proszę przypomnij mi:");
+			mvprintw(6, 6, "Imię syna to - Baltazar (w)");
+			mvprintw(8, 6, "Imię syna to - Kacper (d)");
+			mvprintw(10, 6, "Imię syna to - Kamil (s)"); move(4,2);
+
+			int wybory = getch();	
+
+			if(wybory=='w' || wybory=='W' || wybory=='d' || wybory=='D'){
+				mvprintw(4, 3, "Błąd                                                                                                                                  ");
+				mvprintw(6, 6, "                                            ");
+				mvprintw(8, 6, "                                              ");
+				mvprintw(10, 6, "                                                       "); move(4,2);
+				hp=hp-10;
+				life(hp, vic);
+				break;
+			}else if (wybory=='s' || wybory=='S'){
+				mvprintw(4, 3, "Poprawnie                                                                                                                                ");
+				mvprintw(6, 6, "                                            ");
+				mvprintw(8, 6, "                                              ");
+				mvprintw(10, 6, "                                                       "); move(4,2);
+				break;
+			}
+		}
+		
+		mvprintw(4, 3, "Czas na drugą zagadkę: "); move(4,2); getch();
+		
+		while(true){
+
+			mvprintw(4, 3, "Czerwony ork przebywa w czerwonym domu, Zielony w zielonym domu, a Brązowy w brązowym domu przebywa. Kto przebywa w białym domu?");
+			mvprintw(6, 6, "Biały Ork  (w)");
+			mvprintw(8, 6, "Biały dom jest pusty (d)");
+			mvprintw(10, 6, "Prezydent (s)"); move(4,2);
+
+			int wybory = getch();	
+
+			if(wybory=='w' || wybory=='W' || wybory=='d' || wybory=='D'){
+				mvprintw(4, 3, "Błąd                                                                                                                                  ");
+				mvprintw(6, 6, "                                            ");
+				mvprintw(8, 6, "                                              ");
+				mvprintw(10, 6, "                                                       "); move(4,2);
+				hp=hp-20;
+				life(hp, vic);
+				break;
+			}else if (wybory=='s' || wybory=='S'){
+				mvprintw(4, 3, "Poprawnie                                                                                                                                ");
+				mvprintw(6, 6, "                                            ");
+				mvprintw(8, 6, "                                              ");
+				mvprintw(10, 6, "                                                       "); move(4,2);
+				break;
+			}
+		}
+		
+		mvprintw(4, 3, "Finałowa zagadka, czeka cię już za moment. Daj mi tylko złapać oddech."); move(4,2); getch();
+		
+		while(true){
+
+			mvprintw(4, 3, "Jakiej wielkości jest mapa w tym świecie?                                                                                           ");
+			mvprintw(6, 6, "5 na 11 (w)");
+			mvprintw(8, 6, "6 na 12 (d)");
+			mvprintw(10, 6, "7 na 13 (s)"); move(4,2);
+
+			int wybory = getch();	
+
+			if(wybory=='w' || wybory=='W' || wybory=='d' || wybory=='D'){
+				mvprintw(4, 3, "Błąd                                                                                                                                  ");
+				mvprintw(6, 6, "                                            ");
+				mvprintw(8, 6, "                                              ");
+				mvprintw(10, 6, "                                                       "); move(4,2);
+				hp=hp-30;
+				life(hp, vic);
+				break;
+			}else if (wybory=='s' || wybory=='S'){
+				mvprintw(4, 3, "Poprawnie                                                                                                                                ");
+				mvprintw(6, 6, "                                            ");
+				mvprintw(8, 6, "                                              ");
+				mvprintw(10, 6, "                                                       "); move(4,2);
+				break;
+			}
+		}
+		
+	}
+		
 //6-16
 	
 	else if(ph==6 && pw==16){
@@ -534,91 +722,6 @@ void pages(int ph, int pw, int &vic, int &hp, int &eq, int &cloak, int &ff){
 		}
 	}
 
-//5-16
-	
-	else if(ph==5 && pw==16){
-		attron(COLOR_PAIR(30));mvprintw(1, 50, "Kraina Zagadek");attroff(COLOR_PAIR(30));
-		mvprintw(4, 3, "Przed oczami pojawiła ci się magiczna istota odziana w kapelusz, płaszcz i maskę zakrywającą twarz."); move(4,2); getch();
-		mvprintw(4, 3, "Oznajmiła iż musisz rozwiązać trzy zagadki inaczej czeka cię sroga kara. Oto treść pierwszej zagadki:      "); move(4,2); getch();
-		
-		while(true){
-
-			mvprintw(4, 3, "Gargulec - ojciec Kamila ma trzech synów. Kolejno Kacpra, Melchiora i ostatniego imienia nie pamiętam. Proszę przypomnij mi:");
-			mvprintw(6, 6, "Imię syna to - Baltazar (w)");
-			mvprintw(8, 6, "Imię syna to - Kacper (d)");
-			mvprintw(10, 6, "Imię syna to - Kamil (s)"); move(4,2);
-
-			int wybory = getch();	
-
-			if(wybory=='w' || wybory=='W' || wybory=='d' || wybory=='D'){
-				mvprintw(4, 3, "Błąd                                                                                                                                  ");
-				mvprintw(6, 6, "                                            ");
-				mvprintw(8, 6, "                                              ");
-				mvprintw(10, 6, "                                                       "); move(4,2);
-				hp=hp-10;
-				life(hp, vic);
-			}else if (wybory=='s' || wybory=='S'){
-				mvprintw(4, 3, "Poprawnie                                                                                                                                ");
-				mvprintw(6, 6, "                                            ");
-				mvprintw(8, 6, "                                              ");
-				mvprintw(10, 6, "                                                       "); move(4,2);
-			}
-		}
-		
-		mvprintw(4, 3, "Czas na drugą zagadkę: "); move(4,2); getch();
-		
-		while(true){
-
-			mvprintw(4, 3, "Czerwony ork przebywa w czerwonym domu, Zielony w zielonym domu, a Brązowy w brązowym domu przebywa. Kto przebywa w białym domu?");
-			mvprintw(6, 6, "Biały Ork  (w)");
-			mvprintw(8, 6, "Biały dom jest pusty (d)");
-			mvprintw(10, 6, "Prezydent (s)"); move(4,2);
-
-			int wybory = getch();	
-
-			if(wybory=='w' || wybory=='W' || wybory=='d' || wybory=='D'){
-				mvprintw(4, 3, "Błąd                                                                                                                                  ");
-				mvprintw(6, 6, "                                            ");
-				mvprintw(8, 6, "                                              ");
-				mvprintw(10, 6, "                                                       "); move(4,2);
-				hp=hp-20;
-				life(hp, vic);
-			}else if (wybory=='s' || wybory=='S'){
-				mvprintw(4, 3, "Poprawnie                                                                                                                                ");
-				mvprintw(6, 6, "                                            ");
-				mvprintw(8, 6, "                                              ");
-				mvprintw(10, 6, "                                                       "); move(4,2);
-			}
-		}
-		
-		mvprintw(4, 3, "Finałowa zagadka, czeka cię już za moment. Daj mi tylko złapać oddech."); move(4,2); getch();
-		
-		while(true){
-
-			mvprintw(4, 3, "Jakiej wielkości jest mapa w tym świecie?");
-			mvprintw(6, 6, "5 na 11(w)");
-			mvprintw(8, 6, "6 na 12 (d)");
-			mvprintw(10, 6, "7 na 13(s)"); move(4,2);
-
-			int wybory = getch();	
-
-			if(wybory=='w' || wybory=='W' || wybory=='d' || wybory=='D'){
-				mvprintw(4, 3, "Błąd                                                                                                                                  ");
-				mvprintw(6, 6, "                                            ");
-				mvprintw(8, 6, "                                              ");
-				mvprintw(10, 6, "                                                       "); move(4,2);
-				hp=hp-30;
-				life(hp, vic);
-			}else if (wybory=='s' || wybory=='S'){
-				mvprintw(4, 3, "Poprawnie                                                                                                                                ");
-				mvprintw(6, 6, "                                            ");
-				mvprintw(8, 6, "                                              ");
-				mvprintw(10, 6, "                                                       "); move(4,2);
-			}
-		}
-		
-	}
-	
 //2-18
 	
 	else if(ph==2 && pw==18){
@@ -654,6 +757,28 @@ void pages(int ph, int pw, int &vic, int &hp, int &eq, int &cloak, int &ff){
 		}
 		
 		mvprintw(4, 3, "Idąc za wskazówkami, skarb powinien się znajdować na polu otoczonym z dwóch stron miastem.                                    "); move(4,2);
+	}
+
+//4-18 	
+	
+	else if(ph==4 && pw==18){
+		attron(COLOR_PAIR(30));mvprintw(1, 50, "Zimna Noc");attroff(COLOR_PAIR(30));
+		mvprintw(4, 3, "W zmroku dostrzegłeś bestię o czarnej jak smoła karnacji, która praktycznie całkowicie zlewała się z otoczeniem."); move(4,2); getch();
+		mvprintw(4, 3, "Jej oczy błyszczały neonowym zielonym, wraz z jej pazuram. Z każdym jej krokiem czułeś jakby twoje życie skracało się o połowę."); move(4,2); getch();
+		mvprintw(4, 3, "Wtem roztąpiły się niebiosa i pojawił się On - Uskrzydlony czerwony byk. Bitwa rozgorzała na stałe.                                "); move(4,2); getch();
+		mvprintw(4, 3, "Iż ci życie miłe, uciekłeś wiedząc że zapewne nigdy już więcej nie będziesz miał okazji na zobaczenie tak energetyzującej potyczki."); move(4,2);
+	}
+
+//6-18
+	
+	else if(ph==6 && pw==18){
+		attron(COLOR_PAIR(30));mvprintw(1, 50, "Losowe Wzgórze");attroff(COLOR_PAIR(30));
+		mvprintw(4, 3, "Idąc po całkiem nie równym terenie dostrzegasz coś na niebie."); move(4,2); getch();
+		mvprintw(4, 3, "Czy to ptak? Czy to smok? Czy to teletenżarka do akupunktury?   "); move(4,2); getch();
+		mvprintw(4, 3, "Nie...                                                                     "); move(4,2); getch();
+		mvprintw(4, 3, "To niemożliwe..."); move(4,2); getch();
+		mvprintw(4, 3, "To Le-Go-las wykonujący swój popisowy numer. Tri_SiX_YYY NO_SKOPEE łukiem trzema strzałami jednocześnie."); move(4,2); getch();
+		mvprintw(4, 3, "To był dopiero niezapomniany widok..                                                                           "); move(4,2);
 	}
 	
 //7-18
@@ -997,6 +1122,40 @@ void pages(int ph, int pw, int &vic, int &hp, int &eq, int &cloak, int &ff){
 			eqip(eq);
 		}
 	}	
+
+//6-22
+	
+	else if(ph==6 && pw==22){
+		attron(COLOR_PAIR(30));mvprintw(1, 50, "Don't look at me! I'm shy");attroff(COLOR_PAIR(30));
+		mvprintw(4, 3, "Czy to właśnie zagubiona strzała leci w twoją stronę? Szybko to czas na matematykę."); move(4,2); getch();
+		
+		mvprintw(4, 3, "Strzała leci z prędkością:                                                                 ");
+		mvprintw(6, 6, "100 km/h (w)             ");
+		mvprintw(8, 6, "80 km/h (d)             ");
+		mvprintw(10, 6, "120 km/h (s)             "); move(4,2); getch();
+		
+		mvprintw(4, 3, "Wielkość jej cienia wskazuje na to, że strzała jest na wysokości:         ");
+		mvprintw(6, 6, "10 m (w)             ");
+		mvprintw(8, 6, "5 m (d)             ");
+		mvprintw(10, 6, "7 m (s)             "); move(4,2); getch();
+		
+		mvprintw(4, 3, "Pęd wiatru w tym momencie jest równy:                                        ");
+		mvprintw(6, 6, "2 m/s (w)             ");
+		mvprintw(8, 6, "3 m/s (d)             ");
+		mvprintw(10, 6, "4 m/s (s)             "); move(4,2); getch();
+		
+		mvprintw(4, 3, "Rosa o poranku parowała z prędkością:                                        ");
+		mvprintw(6, 6, "1 l/s (w)             ");
+		mvprintw(8, 6, "3 ml/s (d)             ");
+		mvprintw(10, 6, "7 ml/s (s)             "); move(4,2); getch();
+		
+		mvprintw(6, 6, "                            ");
+		mvprintw(8, 6, "                              ");
+		mvprintw(10, 6, "                                ");
+		mvprintw(4, 3, "I gdy dochodziłeś do konkluzji strzała minęła twoją głowę o 2 centymetry.          "); move(4,2);
+		
+		
+	}
 	
 //8-22
 	
