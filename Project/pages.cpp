@@ -6,6 +6,7 @@ int skip = 0;
 int skipp = 0;
 int slime = 0;
 int krasno = 0;
+int pusto = 0;
 
 void pages(int ph, int pw, int &vic, int &hp, int &eq, int &cloak, int &ff){
 
@@ -260,6 +261,37 @@ void pages(int ph, int pw, int &vic, int &hp, int &eq, int &cloak, int &ff){
 		}
 	}
 
+//2-8
+	
+	else if(ph==2 && pw==8){
+		attron(COLOR_PAIR(30));mvprintw(1, 50, "Podejrzany chodnik");attroff(COLOR_PAIR(30));
+		mvprintw(4, 3, "Idąc sobie polaną, dostrzegasz chodnik. Jego obecność tutaj wydaje się bardzo podejrzana."); move(4,2); getch();
+		
+		while(true){
+		
+			mvprintw(4, 3, "Chcesz przejść się chodnikiem i zobaczyć dokąd prowadzi?                                     ");
+			mvprintw(6, 6, "Jasne (w)");
+			mvprintw(8, 6, "Lepiej nie (d)");move(4,2);
+
+			int wybory = getch();
+
+			if(wybory=='w' || wybory=='W'){
+				mvprintw(4, 3, "Idziesz spokojnie chodnikiem jak gdyby nigdy nic. Gdzieś w końcu musi cię doprowadzić prawda?               ");
+				mvprintw(6, 6, "                                                             ");
+				mvprintw(8, 6, "                                                                 ");move(4,2); getch();
+				mvprintw(4, 3, "To żywy chodnik, stworzony z żywych kamieni stwór, pojawia się znikąd i pożera istoty, które po nim chodzą. "); move(4,2);
+				hp=hp-100;
+				life(hp,vic);
+				break;
+			} else if(wybory=='d' || wybory=='D'){
+				mvprintw(4, 3, "Chodnik ha, pewnie ma jeszcze zęby. Lepiej zostawię go w spokoju.                ");
+				mvprintw(6, 6, "                                                             ");
+				mvprintw(8, 6, "                                                                 ");move(4,2);
+				break;
+			}
+		}
+	}	
+	
 //3-8, 5-8, 7-8
 	
 	else if((ph==3 && pw==8) || (ph==5 && pw==8) || (ph==7 && pw==8)){
@@ -288,7 +320,7 @@ void pages(int ph, int pw, int &vic, int &hp, int &eq, int &cloak, int &ff){
 //3-10, 4-10, 5-10, 6-10, 7-10, 8-10
 	
 	else if(pw==10 && (ph==3 || ph==4 || ph==5 || ph==6 || ph==7 || ph==8)){
-		attron(COLOR_PAIR(30));mvprintw(1, 50, "Krasnale Domniemane Królestwo");attroff(COLOR_PAIR(30));
+		attron(COLOR_PAIR(30));mvprintw(1, 50, "Domniemane Królestwo Krasnali");attroff(COLOR_PAIR(30));
 		if(krasno==0){
 			mvprintw(4, 3, "Właśnie spotkałeś krasnala ogrodowego, który oznajmił ci że jest to teren ich nowo powstałego królestwa."); move(4,2); getch();
 			mvprintw(4, 3, "Oznajmił również, że ...                                                                                   "); move(4,2);
@@ -426,6 +458,21 @@ void pages(int ph, int pw, int &vic, int &hp, int &eq, int &cloak, int &ff){
 		life(hp,vic);
 		mvprintw(4, 3, "Cały wiążący cię ból znika. Czujesz ukojenie w najczystrzej postaci. Twoje ciało dziękuje ci po stokroć.              "); move(4,2);
 	}
+
+//7-14
+	
+	else if(ph==7 && pw==14){
+		attron(COLOR_PAIR(30));mvprintw(1, 50, "Wzgórze Żywych Kamieni");attroff(COLOR_PAIR(30));
+		mvprintw(4, 3, "Tak bratku do ciebie mówię - powiedział kamień.  "); move(4,2); getch();
+		mvprintw(4, 3, "Nawet nie udawaj, że mnie nie słyszysz. Kopsnąłem ci wahę 3 miechy temu, nie gadoj że ci się zapomło."); move(4,2); getch();
+		mvprintw(4, 3, "Za 3 miechole to takie procenty ci wyliczyłem, że bongol ci zaraz w gardle zapieje.                      "); move(4,2); getch();
+		mvprintw(4, 3, "Lepieja ci mówie, już kredyta bierz u Marcjana, be ci na życie mioł.                         "); move(4,2); getch();
+		mvprintw(4, 3, "Nie mogąc znieść pomówień ze strony kamienia, zagrałeś nim w kaczki W GÓRACH."); move(4,2); getch();
+		mvprintw(4, 3, "...                                                                                         "); move(4,2); getch();
+		mvprintw(4, 3, "Cisza spokój. I nagle..."); move(4,2); getch();
+		mvprintw(4, 3, "Sorry Mareczku, naprawdę nie chciałem z tym tak zwlekać. Wiem, że masz żonę i dwójkę dzieci i potrzebujesz bym ci te pieniądze oddał."); move(4,2); getch();
+		mvprintw(4, 3, "Mareczku? ... prysnąłeś w siną dal, byle jak najdalej od tego miejsca.                                                                     "); move(4,2);
+	}
 	
 //6-16
 	
@@ -487,6 +534,91 @@ void pages(int ph, int pw, int &vic, int &hp, int &eq, int &cloak, int &ff){
 		}
 	}
 
+//5-16
+	
+	else if(ph==5 && pw==16){
+		attron(COLOR_PAIR(30));mvprintw(1, 50, "Kraina Zagadek");attroff(COLOR_PAIR(30));
+		mvprintw(4, 3, "Przed oczami pojawiła ci się magiczna istota odziana w kapelusz, płaszcz i maskę zakrywającą twarz."); move(4,2); getch();
+		mvprintw(4, 3, "Oznajmiła iż musisz rozwiązać trzy zagadki inaczej czeka cię sroga kara. Oto treść pierwszej zagadki:      "); move(4,2); getch();
+		
+		while(true){
+
+			mvprintw(4, 3, "Gargulec - ojciec Kamila ma trzech synów. Kolejno Kacpra, Melchiora i ostatniego imienia nie pamiętam. Proszę przypomnij mi:");
+			mvprintw(6, 6, "Imię syna to - Baltazar (w)");
+			mvprintw(8, 6, "Imię syna to - Kacper (d)");
+			mvprintw(10, 6, "Imię syna to - Kamil (s)"); move(4,2);
+
+			int wybory = getch();	
+
+			if(wybory=='w' || wybory=='W' || wybory=='d' || wybory=='D'){
+				mvprintw(4, 3, "Błąd                                                                                                                                  ");
+				mvprintw(6, 6, "                                            ");
+				mvprintw(8, 6, "                                              ");
+				mvprintw(10, 6, "                                                       "); move(4,2);
+				hp=hp-10;
+				life(hp, vic);
+			}else if (wybory=='s' || wybory=='S'){
+				mvprintw(4, 3, "Poprawnie                                                                                                                                ");
+				mvprintw(6, 6, "                                            ");
+				mvprintw(8, 6, "                                              ");
+				mvprintw(10, 6, "                                                       "); move(4,2);
+			}
+		}
+		
+		mvprintw(4, 3, "Czas na drugą zagadkę: "); move(4,2); getch();
+		
+		while(true){
+
+			mvprintw(4, 3, "Czerwony ork przebywa w czerwonym domu, Zielony w zielonym domu, a Brązowy w brązowym domu przebywa. Kto przebywa w białym domu?");
+			mvprintw(6, 6, "Biały Ork  (w)");
+			mvprintw(8, 6, "Biały dom jest pusty (d)");
+			mvprintw(10, 6, "Prezydent (s)"); move(4,2);
+
+			int wybory = getch();	
+
+			if(wybory=='w' || wybory=='W' || wybory=='d' || wybory=='D'){
+				mvprintw(4, 3, "Błąd                                                                                                                                  ");
+				mvprintw(6, 6, "                                            ");
+				mvprintw(8, 6, "                                              ");
+				mvprintw(10, 6, "                                                       "); move(4,2);
+				hp=hp-20;
+				life(hp, vic);
+			}else if (wybory=='s' || wybory=='S'){
+				mvprintw(4, 3, "Poprawnie                                                                                                                                ");
+				mvprintw(6, 6, "                                            ");
+				mvprintw(8, 6, "                                              ");
+				mvprintw(10, 6, "                                                       "); move(4,2);
+			}
+		}
+		
+		mvprintw(4, 3, "Finałowa zagadka, czeka cię już za moment. Daj mi tylko złapać oddech."); move(4,2); getch();
+		
+		while(true){
+
+			mvprintw(4, 3, "Jakiej wielkości jest mapa w tym świecie?");
+			mvprintw(6, 6, "5 na 11(w)");
+			mvprintw(8, 6, "6 na 12 (d)");
+			mvprintw(10, 6, "7 na 13(s)"); move(4,2);
+
+			int wybory = getch();	
+
+			if(wybory=='w' || wybory=='W' || wybory=='d' || wybory=='D'){
+				mvprintw(4, 3, "Błąd                                                                                                                                  ");
+				mvprintw(6, 6, "                                            ");
+				mvprintw(8, 6, "                                              ");
+				mvprintw(10, 6, "                                                       "); move(4,2);
+				hp=hp-30;
+				life(hp, vic);
+			}else if (wybory=='s' || wybory=='S'){
+				mvprintw(4, 3, "Poprawnie                                                                                                                                ");
+				mvprintw(6, 6, "                                            ");
+				mvprintw(8, 6, "                                              ");
+				mvprintw(10, 6, "                                                       "); move(4,2);
+			}
+		}
+		
+	}
+	
 //2-18
 	
 	else if(ph==2 && pw==18){
@@ -558,6 +690,35 @@ void pages(int ph, int pw, int &vic, int &hp, int &eq, int &cloak, int &ff){
 		mvprintw(4, 3, "I tak w końcu siadasz koło takiej sosenki i zastanawiasz się. Czy grzyby były warte tych wszystkich testów"); move(4,2);
 		
 		
+	}
+
+//5-20
+	
+	else if(ph==5 && pw==20){
+		attron(COLOR_PAIR(30));mvprintw(1, 50, "Osuwisko");attroff(COLOR_PAIR(30));
+		mvprintw(4, 3, "Pomimo nachodzącego zmęczenia postanowiłeś dalej kontynuować podróż mimo nadejścia zmroku.  "); move(4,2); getch();
+		mvprintw(4, 3, "Decyzję tą szybko zweryfikował niechybny los. Wpadłeś do Osuwiska. Gdy zrobiłeś w nim krok, zapaliły się pochodnie tworząc spory okrąg w około ciebie. "); move(4,2); getch();
+		mvprintw(4, 3, "Na ziemi znalazłeś trochę bandarzy i jeszcze świeżej żywności. A to może oznaczać tylko jedno - szykuje się ciężka bitwa.                                     "); move(4,2); getch();
+		hp=hp+30;
+		life(hp, vic);
+		mvprintw(4, 3, "Z cienia spoza okręgu wyłonił się Golem sporych rozmiarów. Ciało miał pokryte kamieniami, a oczy jego świeciły magią.         "); move(4,2); getch();
+		if(eq==2 || eq==3){
+			mvprintw(4, 3, "Mimo iż miecz twój był nieskuteczny udało ci się dzięki niemu wychwycić dziwne zachowanie bestii.                       "); move(4,2); getch();
+			hp=hp-10;
+			life(hp, vic);
+			mvprintw(4, 3, "Istota za wszelką cenę broniła swojej prawej pięty.                                                     "); move(4,2); getch();
+			hp=hp-10;
+			life(hp, vic);
+			mvprintw(4, 3, "Wykorzystując tą wiedzę udało ci się pokonać stwora, a z jego truchłą zrobiłeś schody wyjściowe z osuwiska."); move(4,2); getch();
+		} else{
+			mvprintw(4, 3, "To nie była bitwa, którą mogłeś wygrać. Zacząłeś biec przed siebie nie patrząc na spadające życie.                      "); move(4,2); getch();
+			hp=hp-50;
+			life(hp, vic);
+			
+			if(hp>0){
+				mvprintw(4, 3, "W końcu po długiej wspinaczce udało ci się wydostać.                                                       "); move(4,2);
+			}
+		}
 	}
 	
 //7-20
@@ -1145,8 +1306,78 @@ void pages(int ph, int pw, int &vic, int &hp, int &eq, int &cloak, int &ff){
 	} 
 	
 	else{
-		attron(COLOR_PAIR(30));mvprintw(1, 50, "Pustkowia");attroff(COLOR_PAIR(30));
-		mvprintw(4, 3, "Rozglądając się dookoła nic nie zwróciło twojej uwagi");
+		if(pusto==0){
+			attron(COLOR_PAIR(30));mvprintw(1, 50, "Pustkowia");attroff(COLOR_PAIR(30));
+			mvprintw(4, 3, "Rozglądając się dookoła nic nie zwróciło twojej uwagi.");move(4,2);
+			pusto++;
+		} else if(pusto==1){
+			attron(COLOR_PAIR(30));mvprintw(1, 50, "Nicość");attroff(COLOR_PAIR(30));
+			mvprintw(4, 3, "Bardzo chciałeś by tutaj coś było, lecz niestety nie tym razem.");move(4,2);
+			pusto++;
+		} else if(pusto==2){
+			attron(COLOR_PAIR(30));mvprintw(1, 50, "Miejsce");attroff(COLOR_PAIR(30));
+			mvprintw(4, 3, "Tak to jest bardzo interesujące miejsce.");move(4,2);
+			pusto++;
+		} else if(pusto==3){
+			attron(COLOR_PAIR(30));mvprintw(1, 50, "Ktokolwiek to czyta?");attroff(COLOR_PAIR(30));
+			mvprintw(4, 3, "No jest tu i czyste powietrze i lekka mrzawka, ale ile razy można mówić podobne rzeczy.");move(4,2);
+			pusto++;
+		} else if(pusto==4){
+			attron(COLOR_PAIR(30));mvprintw(1, 50, "Śpiewanko");attroff(COLOR_PAIR(30));
+			mvprintw(4, 3, "Idąc przez te terytoria zachciało ci się śpiewać. Więc szłeś wesoło podśpiewując death metal.");move(4,2);
+			pusto++;
+		} else if(pusto==4){
+			attron(COLOR_PAIR(30));mvprintw(1, 50, "Śpiewanko");attroff(COLOR_PAIR(30));
+			mvprintw(4, 3, "Idąc przez te terytoria zachciało ci się śpiewać. Więc szłeś wesoło podśpiewując death metal.");move(4,2);
+			pusto++;
+		} else if(pusto==5){
+			attron(COLOR_PAIR(30));mvprintw(1, 50, "Gdyby kózka nie skakała");attroff(COLOR_PAIR(30));
+			mvprintw(4, 3, "Wpadłeś na genialny pomysł, aby sobie poskakać. Niestety nie był to najinteligentniejszy pomysł na jaki wpadłeś.");move(4,2);
+			mvprintw(6, 6, "Twoja kostka teraz naprawdę boli");move(4,2);
+			pusto++;
+		} else if(pusto==6){
+			attron(COLOR_PAIR(30));mvprintw(1, 50, "Coś na Drodze");attroff(COLOR_PAIR(30));
+			mvprintw(4, 3, "Spotkałeś coś na drodze i obiecałeś mu, że nikomu nie powiesz czym jest.");move(4,2); getch();
+			mvprintw(4, 3, "I tak też zrobiłeś.                                                        ");move(4,2);
+			pusto++;
+		} else if(pusto==7){
+			attron(COLOR_PAIR(30));mvprintw(1, 50, "Marzenia");attroff(COLOR_PAIR(30));
+			mvprintw(4, 3, "Zamyśliłeś się. Gdy byłeś gdzieś między sensem życia, a bólem istnienia doznałeś objawienia. Mięso na obiad to byłby całkiem dobry pomysł.");move(4,2);
+			pusto++;
+		} else if(pusto==8){
+			attron(COLOR_PAIR(30));mvprintw(1, 50, "Niespodzianka");attroff(COLOR_PAIR(30));
+			mvprintw(4, 3, "Na swojej drodze spotkałeś mglaka. No wiesz taką istotę co żyje w mgle, dlatego nikt jej nigdy nie widział. W sumie fajnie.");move(4,2);
+			pusto++;
+		} else if(pusto==9){
+			attron(COLOR_PAIR(30));mvprintw(1, 50, "...");attroff(COLOR_PAIR(30));
+			mvprintw(4, 3, "...");move(4,2); getch();
+			mvprintw(4, 3, "Fajnie");move(4,2);
+			pusto++;
+		} else if(pusto==10){
+			attron(COLOR_PAIR(30));mvprintw(1, 50, "Nie Głoduj");attroff(COLOR_PAIR(30));
+			mvprintw(4, 3, "Zacząłeś wydawać z siebie dźwięk instrumentu i myślisz jakie miałbyś imię, gdyby zaczynało się ono na W.");move(4,2);
+			pusto++;
+		} else if(pusto==11){
+			attron(COLOR_PAIR(30));mvprintw(1, 50, "Wszystko");attroff(COLOR_PAIR(30));
+			mvprintw(4, 3, "Zobaczyłeś tak wiele wszystkiego, że aż nie byłeś w stanie tego opisać. ");move(4,2);
+			pusto++;
+		} else if(pusto==12){
+			attron(COLOR_PAIR(30));mvprintw(1, 50, "Pytania");attroff(COLOR_PAIR(30));
+			mvprintw(4, 3, "Długie podróże mają do siebie to, że masz mnóstwo wolnego czasu. Więc odpowiadasz na wszystkie pytania jakie ci do głowy przyjdą.");move(4,2);
+			pusto++;
+		} else if(pusto==13){
+			attron(COLOR_PAIR(30));mvprintw(1, 50, "Droga do Pacanowa");attroff(COLOR_PAIR(30));
+			mvprintw(4, 3, "Właśnie minąłeś kozę chodzącą na dwóch nogach. Ciekawe było to zjawisko. Ciekawe dokąd szła. ");move(4,2);
+			pusto++;
+		} else if(pusto==14){
+			attron(COLOR_PAIR(30));mvprintw(1, 50, "Gra");attroff(COLOR_PAIR(30));
+			mvprintw(4, 3, "Nagle naszła cię ochota, aby zagrać w jakąś hitową grę jak szachy, czy młynek. Ciekawe w co ludzie będą grali w przyszłości.");move(4,2);
+			pusto++;
+		} else if(pusto==15){
+			attron(COLOR_PAIR(30));mvprintw(1, 50, "Amnezja");attroff(COLOR_PAIR(30));
+			mvprintw(4, 3, "Zapomniałeś co miałeś powiedzieć. Więc zacznijmy od początku.");move(4,2);
+			pusto=0;
+		}
 	}
 	
 	attroff(A_BOLD);
