@@ -1,0 +1,26 @@
+Dzień Dobry,
+
+Gra do poprawnego uruchomienia wymaga biblioteki ncursesw. W celu jej wgrania należy wpisać komendę: "Sudo apt-get install libncurses5-dev libncursesw5-dev" do Linuxowego terminala
+Następnie podczas kompilacji pliku main.cpp należy użyć flagi -lncursesw. Pełna komenda: "g++ main.cpp -lncursesw -o gra.bin"
+Następnie plik można uruchomić komendą: "./gra.bin"
+
+Uwaga gra wymaga posiadania terminala obsługującego co najmniej 8 podstawowych kolorów. Po Uwadze
+
+
+
+
+
+
+
+
+Dokładna instrukcja uruchomienia:
+
+1. Uruchom Linuxa
+2. Pobierz wszystkie pliki znajdujące się w tej lokalizacji i wrzuć je w jedno miejsce
+3. Odpal terminal i znajdź miejsce, w którym umieściłeś pliki (cd +lokalizacja+) W razie trudności wrzuć wszystkie pliki do katalogu home.
+4. Upewnij się, że masz zainstalowaną komendę g++ i obsługę języka c++
+5. Zainstaluj obsługę bibliotekę ncursesw "Sudo apt-get install libncurses5-dev libncursesw5-dev"
+6. Upewnij się, że twoja konsola obsługuje co najmniej 8 podstawowych kolorów
+7. Skompiluj grę komendą "g++ main.cpp -lncursesw -o gra.bin"
+8. Uruchom grę komendą "./gra.bin"
+
