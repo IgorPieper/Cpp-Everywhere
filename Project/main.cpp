@@ -20,6 +20,7 @@ std::setlocale(LC_ALL, "");
 
 initscr();
 keypad(stdscr, TRUE);
+noecho();
 
 start(ph, pw, hp);
 

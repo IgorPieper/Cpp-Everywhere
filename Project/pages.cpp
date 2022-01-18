@@ -95,7 +95,7 @@ void pages(int ph, int pw, int &vic, int &hp, int &eq, int &cloak, int &ff){
 		mvprintw(4, 3, "Różane ogrody ciągną się kilometrami. Tylko nieliczni są w stanie dostać się w sam środek tego bezlitosnego miejsca. ");
 		mvprintw(6, 6, "Stoi tu od dawien dawna, nikt nie wie jak długo fontanna tryskająca wodą rdzawego koloru."); move(4,2); getch();
 		
-		mvprintw(4, 3, "Nie pierwszy raz trafiasz do tego cichego miejsca. Nawet ptakom brakuje sił by dostać się do tego miejsca.             ");
+		mvprintw(4, 3, "Nie pierwszy raz trafiasz do tego cichego miejsca. Nawet ptakom brakuje sił by się tutaj dostać.                              ");
 		mvprintw(6, 6, "Tym bardziej dziwi obecność zakapturzonej osobistości, którą dostrzegasz zza fontanny.                       "); move(4,2); getch();
 		
 		mvprintw(4, 3, "Siedzi na jedynej jeszcze stojącej ławie, brązowy płaszcz okrywa calutkie jego ciało. Jego wzrok skierowany jest ku glebie."); 
@@ -551,7 +551,7 @@ void pages(int ph, int pw, int &vic, int &hp, int &eq, int &cloak, int &ff){
 			
 			int wybory = getch();
 			
-			if(wybory=='w' || wybory=='W' || wybory=='d' || wybory=='D'){
+			if(wybory=='w' || wybory=='W'){
 				
 			mvprintw(6, 6, "                                                 ");
 			mvprintw(8, 6, "                                                 ");
@@ -565,7 +565,7 @@ void pages(int ph, int pw, int &vic, int &hp, int &eq, int &cloak, int &ff){
 					mvprintw(4, 3, "Pudło                                                     ");move(4,2); getch();
 					licznik++;
 				}
-			}else if (wybory=='s' || wybory=='S'){
+			}else if (wybory=='d' || wybory=='D'){
 				break;
 			}
 		}
